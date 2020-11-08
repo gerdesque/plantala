@@ -1,6 +1,3 @@
-# plantala
-Projekt "Plantala" im Rahmen von Coding da Vinci Niedersachsen 2020
-
 # [Plantala](https://gerdesque.github.io/plantala/)
 
 Malen. Strahlen. Plantala!
