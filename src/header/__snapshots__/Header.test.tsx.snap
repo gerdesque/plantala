@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+<div
+  className="app-header"
+>
+  <img
+    alt="logo"
+    className="app-logo"
+    src="logo.png"
+  />
+  <h1>
+    Plantala
+  </h1>
+</div>
+`;
