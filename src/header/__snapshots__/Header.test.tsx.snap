@@ -5,7 +5,7 @@ exports[`Header should render correctly 1`] = `
   className="app-header"
 >
   <img
-    alt="logo"
+    alt="Plantala logo"
     className="app-logo"
     src="logo.png"
   />
