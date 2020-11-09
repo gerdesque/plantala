@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => 
   <div className="app-header">  
-    <img src={logo} className="app-logo" alt="logo" />
+    <img src={logo} className="app-logo" alt="Plantala logo" />
     <h1>Plantala</h1>
   </div>
 
