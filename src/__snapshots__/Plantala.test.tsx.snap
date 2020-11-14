@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Plantala should render correctly 1`] = `
-<div
-  className="plantala"
->
-  <Header />
-</div>
-`;
