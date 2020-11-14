@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<footer
+  className="makeStyles-footer-1"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    justify="center"
+    spacing={2}
+  >
+    <WithStyles(ForwardRef(AvatarGroup))
+      max={5}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</footer>
+`;

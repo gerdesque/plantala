@@ -10,13 +10,11 @@ exports[`Header should render correctly 1`] = `
     <WithStyles(ForwardRef(Toolbar))>
       <img
         alt="Plantala logo"
-        className="app-logo"
+        className="makeStyles-icon-1"
         src="logo.png"
       />
       <WithStyles(ForwardRef(Typography))
-        color="inherit"
-        noWrap={true}
-        variant="h6"
+        variant="h2"
       >
         Plantala
       </WithStyles(ForwardRef(Typography))>

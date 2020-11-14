@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should render correctly 1`] = `
+<main>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-heroContent-1"
+    maxWidth="md"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      color="textPrimary"
+      gutterBottom={true}
+      variant="h4"
+    >
+      Erstelle dein Mandala!
+    </WithStyles(ForwardRef(Typography))>
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        justify="center"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          md={3}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="primary"
+            fullWidth={true}
+            variant="contained"
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </WithStyles(ForwardRef(Container))>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-landing-2"
+    maxWidth="xs"
+  >
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      justify="center"
+    >
+      <img
+        alt="Plantala"
+        className="app-landing"
+        src="logo.png"
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Container))>
+</main>
+`;

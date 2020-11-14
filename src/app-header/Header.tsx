@@ -1,20 +1,29 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import logo from '../logo.png';
-import './Header.css';
 
-const Header: React.FunctionComponent = () => 
-  <div className="app-header">
-    <AppBar position="relative">
-      <Toolbar>
-        <img src={logo} className="app-logo" alt="Plantala logo" />
-        <Typography variant="h6" color="inherit" noWrap>
-          Plantala
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  </div>
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    marginRight: theme.spacing(2),
+    height: theme.spacing(8),
+    width: theme.spacing(8)
+  }
+}));
 
-export default Header;
+export default function Header() {
+  const classes = useStyles();
+
+  return (
+    <div className="app-header">
+      <AppBar position="relative">
+        <Toolbar>
+          <img src={logo} className={classes.icon} alt="Plantala logo" />
+          <Typography variant="h2">
+            Plantala
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
+};

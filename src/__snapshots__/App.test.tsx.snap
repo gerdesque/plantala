@@ -56,7 +56,7 @@ exports[`App should render correctly 1`] = `
         "augmentColor": [Function],
         "background": Object {
           "default": "#FF7D5D",
-          "paper": "#fff",
+          "paper": "#0082A2",
         },
         "common": Object {
           "black": "#000",
