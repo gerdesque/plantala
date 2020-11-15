@@ -1,21 +1,27 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { Button, Typography } from '@material-ui/core';
+import { createShallow } from '@material-ui/core/test-utils';
+import { ShallowWrapper } from 'enzyme';
 import Main from './Main';
 
 describe('Main', () => {
 
+  let shallow: any;
   let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
 
-  beforeEach(() => wrapper = shallow(<Main plants={[]} />));
+  beforeEach(() => {
+    shallow = createShallow();
+    wrapper = shallow(<Main plants={[]} storedNavigationValue=''/>);
+  });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
-  it('should render a <div /> container', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should display the text "Erstelle dein Mandala!"', () => {
+    expect(wrapper.find(Typography).text()).toEqual('Erstelle dein Mandala!');
   });
 
-  it('should display a heading 1', () => {
-    expect(wrapper.find('img').length).toEqual(1);
+  it('should display a <Button /> with an empty label', () => {
+    expect(wrapper.find(Button).text()).toEqual('');
   });
 
 });

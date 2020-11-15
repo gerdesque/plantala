@@ -34,19 +34,10 @@ exports[`Main should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    className="makeStyles-landing-2"
-    maxWidth="xs"
+    className="makeStyles-main-2"
+    maxWidth="md"
   >
-    <WithStyles(ForwardRef(Grid))
-      container={true}
-      justify="center"
-    >
-      <img
-        alt="Plantala"
-        className="app-landing"
-        src="logo.png"
-      />
-    </WithStyles(ForwardRef(Grid))>
+    <Landing />
   </WithStyles(ForwardRef(Container))>
 </main>
 `;

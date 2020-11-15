@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing should render correctly 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  justify="center"
+>
+  <img
+    alt="Plantala"
+    className="app-landing"
+    src="logo.png"
+  />
+</WithStyles(ForwardRef(Grid))>
+`;

@@ -3,7 +3,7 @@ import { createShallow } from '@material-ui/core/test-utils';
 import Plant from './Plant';
 import Typography from '@material-ui/core/Typography';
 
-describe('Header', () => {
+describe('Plant', () => {
 
   let shallow: any;
   let wrapper: any;
