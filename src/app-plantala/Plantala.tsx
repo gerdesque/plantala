@@ -3,36 +3,29 @@ import Header from '../app-header/Header';
 import Main from '../app-main/Main';
 import Footer from '../app-footer/Footer';
 import './Plantala.css';
-
-interface IPlant {
-  name: string,
-  source: string
-}
+import { plants } from '../plants';
+import { IPlant } from '../plant/Plant';
 
 interface IPlantalaState {
-  plants: [],
+  plants: IPlant[],
   selectedPlants: IPlant[],
+  activePlant: IPlant,
   storedNavigationValue: string,
 }
 
 class Plantala extends Component {
   state: IPlantalaState = {
     // values to be displayed in <Card />
-    plants: [],
-    // plants selected for <Plant />
-    selectedPlants: [
-      {name: '1', source: '1.png'},
-      {name: '2', source: '2.png'},
-      {name: '3', source: '3.png'},
-      {name: '4', source: '4.png'},
-      {name: '5', source: '5.png'}
-    ],
+    plants: plants,
+    // plants selected for <AvatarGroup />
+    selectedPlants: [],
+    // active plant for <Plant />
+    activePlant: {} as IPlant,
     // stored value to use for math operation
     storedNavigationValue: 'Start',
   }
 
   render = () => {
-    // unpack the component state by using Object Destructuring
     const { plants, selectedPlants, storedNavigationValue } = this.state;
 
     return (

@@ -2,11 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar, Grid } from '@material-ui/core';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
-
-interface IPlant {
-  name: string,
-  source: string
-}
+import { IPlant } from '../plant/Plant';
 
 interface IFooterProps {
   selectedPlants: IPlant[]
@@ -32,7 +28,7 @@ export default function Footer({selectedPlants}: IFooterProps) {
     <Avatar
       key={plant.name}
       alt={plant.name}
-      src={`${process.env.PUBLIC_URL}/${plant.source}`}
+      src={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
       className={classes.avatar} />);
 
   return (
