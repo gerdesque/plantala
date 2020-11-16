@@ -3,7 +3,7 @@ import { Button, Typography } from '@material-ui/core';
 import { createShallow } from '@material-ui/core/test-utils';
 import { ShallowWrapper } from 'enzyme';
 import Main from './Main';
-import { ButtonValue, HeaderValue } from '../app-plantala/Plantala';
+import { Action } from '../app-plantala/Plantala';
 import Landing from '../landing/Landing';
 import PlantList from '../plant-list/PlantList';
 
@@ -15,9 +15,9 @@ describe('Main in Start mode', () => {
   beforeEach(() => {
     shallow = createShallow();
     wrapper = shallow(<Main
-      plants={[]}
-      displayedButtonValue={ButtonValue.Start}
-      displayedHeaderValue={HeaderValue.Start} />);
+      plants = {[]}
+      action = {Action.Start}
+      setAction = {jest.fn()} />);
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
@@ -49,8 +49,8 @@ describe('Main in Selection mode', () => {
     shallow = createShallow();
     wrapper = shallow(<Main
       plants={[]}
-      displayedButtonValue={ButtonValue.Select}
-      displayedHeaderValue={HeaderValue.Select} />);
+      action = {Action.Select}
+      setAction = {jest.fn()} />);
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());

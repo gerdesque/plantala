@@ -6,8 +6,7 @@ exports[`Plantala should render correctly 1`] = `
 >
   <Header />
   <Main
-    displayedButtonValue="Start"
-    displayedHeaderValue="Erstelle dein Mandala!"
+    action="Start"
     plants={
       Array [
         Object {
@@ -25,6 +24,7 @@ exports[`Plantala should render correctly 1`] = `
         },
       ]
     }
+    setAction={[Function]}
   />
   <Footer
     selectedPlants={

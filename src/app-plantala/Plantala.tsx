@@ -6,26 +6,18 @@ import './Plantala.css';
 import { plants } from '../plants';
 import { IPlant } from '../plant/Plant';
 
-export enum ButtonValue {
+export enum Action {
   Start = "Start",
-  Select = "Zur Auswahl hinzufügen",
-  Done = "Fertig",
-  Again = "Neues Plantala erstellen"
-}
-
-export enum HeaderValue {
-  Start = "Erstelle dein Mandala!",
-  Select = "Wähle bis zu 5 Karten aus",
-  Done = "Gestalte dein Plantala",
-  Again = "Teile dein Plantala"
+  Select = "Select",
+  Done = "Done",
+  Again = "Again"
 }
 
 interface IPlantalaState {
   plants: IPlant[],
   selectedPlants: IPlant[],
   activePlant: IPlant,
-  displayedButtonValue: ButtonValue,
-  displayedHeaderValue: HeaderValue,
+  action: Action
 }
 
 class Plantala extends Component {
@@ -36,20 +28,24 @@ class Plantala extends Component {
     selectedPlants: plants,
     // active plant for <Plant />
     activePlant: {} as IPlant,
-    displayedButtonValue: ButtonValue.Start,
-    displayedHeaderValue: HeaderValue.Start
+    // action mode to be displayed in <Main />
+    action: Action.Start,
+  }
+
+  setAction = () => {
+    this.setState({action: Action.Select});
   }
 
   render = () => {
-    const { plants, selectedPlants, displayedButtonValue, displayedHeaderValue } = this.state;
+    const { plants, selectedPlants, action } = this.state;
 
     return (
       <div className="plantala">
         <Header />
         <Main
           plants={plants}
-          displayedButtonValue={displayedButtonValue}
-          displayedHeaderValue={displayedHeaderValue} />
+          action={action}
+          setAction={this.setAction} />
         <Footer
           selectedPlants={selectedPlants} />
       </div>

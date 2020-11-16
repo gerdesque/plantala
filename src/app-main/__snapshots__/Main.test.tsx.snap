@@ -29,6 +29,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
           <WithStyles(ForwardRef(Button))
             color="secondary"
             fullWidth={true}
+            onClick={[MockFunction]}
             variant="contained"
           >
             Zur Auswahl hinzufügen
@@ -77,6 +78,7 @@ exports[`Main in Start mode should render correctly 1`] = `
           <WithStyles(ForwardRef(Button))
             color="secondary"
             fullWidth={true}
+            onClick={[MockFunction]}
             variant="contained"
           >
             Start
