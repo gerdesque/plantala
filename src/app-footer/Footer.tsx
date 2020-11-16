@@ -11,12 +11,14 @@ interface IFooterProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     footer: {
-      backgroundColor: theme.palette.background.paper,
       padding: theme.spacing(4),
+      backgroundColor: theme.palette.primary.light,
     },
     avatar: {
       width: theme.spacing(8),
       height: theme.spacing(8),
+      borderColor: theme.palette.secondary.main,
+      cursor: 'pointer'
     },
   }),
 );

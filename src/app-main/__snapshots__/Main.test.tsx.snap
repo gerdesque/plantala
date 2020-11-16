@@ -1,7 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main should render correctly 1`] = `
-<main>
+exports[`Main in Selection mode should render correctly 1`] = `
+<main
+  className="makeStyles-main-3"
+>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-heroContent-1"
+    maxWidth="md"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      color="textPrimary"
+      gutterBottom={true}
+      variant="h4"
+    >
+      Wähle bis zu 5 Karten aus
+    </WithStyles(ForwardRef(Typography))>
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        justify="center"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          md={3}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="secondary"
+            fullWidth={true}
+            variant="contained"
+          >
+            Zur Auswahl hinzufügen
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </WithStyles(ForwardRef(Container))>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-content-2"
+    maxWidth="md"
+  >
+    <PlantList
+      plants={Array []}
+    />
+  </WithStyles(ForwardRef(Container))>
+</main>
+`;
+
+exports[`Main in Start mode should render correctly 1`] = `
+<main
+  className="makeStyles-main-3"
+>
   <WithStyles(ForwardRef(Container))
     className="makeStyles-heroContent-1"
     maxWidth="md"
@@ -25,16 +75,18 @@ exports[`Main should render correctly 1`] = `
           md={3}
         >
           <WithStyles(ForwardRef(Button))
-            color="primary"
+            color="secondary"
             fullWidth={true}
             variant="contained"
-          />
+          >
+            Start
+          </WithStyles(ForwardRef(Button))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    className="makeStyles-main-2"
+    className="makeStyles-content-2"
     maxWidth="md"
   >
     <Landing />

@@ -55,8 +55,8 @@ exports[`App should render correctly 1`] = `
         },
         "augmentColor": [Function],
         "background": Object {
-          "default": "#FF7D5D",
-          "paper": "#0082A2",
+          "default": "#fafafa",
+          "paper": "#fff",
         },
         "common": Object {
           "black": "#000",
@@ -95,15 +95,15 @@ exports[`App should render correctly 1`] = `
         },
         "primary": Object {
           "contrastText": "#fff",
-          "dark": "rgb(0, 91, 113)",
-          "light": "rgb(51, 155, 180)",
-          "main": "#0082A2",
+          "dark": "#0069c0",
+          "light": "#6ec6ff",
+          "main": "#2196f3",
         },
         "secondary": Object {
-          "contrastText": "#fff",
-          "dark": "#c51162",
-          "light": "#ff4081",
-          "main": "#f50057",
+          "contrastText": "rgba(0, 0, 0, 0.87)",
+          "dark": "#ba5100",
+          "light": "#ffb053",
+          "main": "#f37f21",
         },
         "success": Object {
           "contrastText": "rgba(0, 0, 0, 0.87)",

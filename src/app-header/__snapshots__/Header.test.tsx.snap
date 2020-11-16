@@ -1,17 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
-<div
-  className="app-header"
->
+<div>
   <WithStyles(ForwardRef(AppBar))
+    className="makeStyles-header-1"
     position="relative"
   >
     <WithStyles(ForwardRef(Toolbar))>
       <img
         alt="Plantala logo"
-        className="makeStyles-icon-1"
-        src="logo.png"
+        className="makeStyles-icon-2"
+        src="logo.webp"
       />
       <WithStyles(ForwardRef(Typography))
         variant="h2"

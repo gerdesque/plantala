@@ -6,6 +6,8 @@ exports[`Plantala should render correctly 1`] = `
 >
   <Header />
   <Main
+    displayedButtonValue="Start"
+    displayedHeaderValue="Wähle bis zu 5 Karten aus"
     plants={
       Array [
         Object {
@@ -23,10 +25,25 @@ exports[`Plantala should render correctly 1`] = `
         },
       ]
     }
-    storedNavigationValue="Start"
   />
   <Footer
-    selectedPlants={Array []}
+    selectedPlants={
+      Array [
+        Object {
+          "description": "Lehrtafel von Carl von Tubeuf",
+          "name": "Lathraea squamaria",
+          "source": "1.png",
+        },
+        Object {
+          "name": "Oedogonium diplandrum Juranyi",
+          "source": "2.png",
+        },
+        Object {
+          "name": "Nicotiana Tabacum L.",
+          "source": "3.png",
+        },
+      ]
+    }
   />
 </div>
 `;

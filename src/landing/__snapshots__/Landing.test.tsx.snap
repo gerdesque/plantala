@@ -8,7 +8,7 @@ exports[`Landing should render correctly 1`] = `
   <img
     alt="Plantala"
     className="app-landing"
-    src="logo.png"
+    src="logo.webp"
   />
 </WithStyles(ForwardRef(Grid))>
 `;
