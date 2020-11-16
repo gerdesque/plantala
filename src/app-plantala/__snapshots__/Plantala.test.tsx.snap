@@ -7,7 +7,7 @@ exports[`Plantala should render correctly 1`] = `
   <Header />
   <Main
     displayedButtonValue="Start"
-    displayedHeaderValue="Wähle bis zu 5 Karten aus"
+    displayedHeaderValue="Erstelle dein Mandala!"
     plants={
       Array [
         Object {
