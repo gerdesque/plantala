@@ -15,7 +15,7 @@ export enum ButtonValue {
 
 export enum HeaderValue {
   Start = "Erstelle dein Mandala!",
-  Select = "Wähle bis zu 5 Karten aus",
+  Select = "Wähle 5 Karten",
   Done = "Gestalte dein Plantala",
   Again = "Teile dein Plantala"
 }
@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     backgroundColor: theme.palette.primary.main,
+    width: 'inherit'
   },
 }));
 
@@ -45,7 +46,7 @@ export default function Main({ plants, action, setAction }: IMainProps) {
   return (
     <main className={classes.main}>
       <Container maxWidth="md" className={classes.heroContent}>
-        <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
+        <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
           {HeaderValue[action]}
         </Typography>
         <div>

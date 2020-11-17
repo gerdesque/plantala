@@ -1,6 +1,9 @@
 import React from 'react';
-import { Button, Card, CardActions, CardMedia, CardContent, Grid, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardMedia, CardContent, Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import './PlantList.css';
 import { IPlant } from '../plant/Plant';
 
 interface IPlantListProps {
@@ -24,12 +27,39 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PlantList({ plants }: IPlantListProps) {
   const classes = useStyles();
-
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      partialVisibilityGutter: 10
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      partialVisibilityGutter: 10
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 10
+    }
+  };
   return (
-    <Grid container spacing={4} justify="center">
-      {plants.map((plant) => (
-        <Grid item key={plant.name} xs={12} sm={6} md={4}>
-          <Card className={classes.plant}>
+      <Carousel
+      itemClass="image-item"
+      responsive={responsive}
+      renderDotsOutside
+      infinite={true}
+      autoPlay={false}
+      containerClass="carousel-container"
+      customTransition="all .3s linear"
+      transitionDuration={300}
+      centerMode={true}
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+    >
+      {plants.map(plant => {
+        return (
+          <Card key={plant.name} className={classes.plant}>
             <CardMedia
               className={classes.plantMedia}
               image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
@@ -49,8 +79,8 @@ export default function PlantList({ plants }: IPlantListProps) {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
-      ))}
-    </Grid>
+        );
+      })}
+      </Carousel>
   );
 }
