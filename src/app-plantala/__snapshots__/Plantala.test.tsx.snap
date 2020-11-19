@@ -6,44 +6,46 @@ exports[`Plantala should render correctly 1`] = `
 >
   <Header />
   <Main
-    action="Start"
+    action="Select"
     plants={
       Array [
         Object {
-          "description": "Lehrtafel von Carl von Tubeuf",
-          "name": "Lathraea squamaria",
-          "source": "1.png",
+          "active": false,
+          "description": "Acacia Senegal",
+          "name": "Gummiakazie",
+          "source": "Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.png",
         },
         Object {
-          "name": "Oedogonium diplandrum Juranyi",
-          "source": "2.png",
+          "active": false,
+          "description": "Ananas sativus",
+          "name": "Ananas",
+          "source": "Ananas_sativus_Schult._Ananas_Ausschnitt_Bunt.png",
         },
         Object {
-          "name": "Nicotiana Tabacum L.",
-          "source": "3.png",
+          "active": false,
+          "description": "Andropogon Sorghum Brotero",
+          "name": "Mohrenhirse",
+          "source": "Andropogon_Sorghum_Brotero_var._Durrha._Mohrenhirse_Ausschnitt_Bunt.png",
+        },
+        Object {
+          "active": false,
+          "description": "Cola acuminata",
+          "name": "Kolabaum",
+          "source": "Cola_acuminata_R._Brown_Kolabaum_Ausschnitt_bunt.png",
+        },
+        Object {
+          "active": false,
+          "description": "Myristica fragrans Houttuyn",
+          "name": "Muskatnussbaum",
+          "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Ausschnitt_Bunt.png",
         },
       ]
     }
     setAction={[Function]}
+    setSelectedPlant={[Function]}
   />
   <Footer
-    selectedPlants={
-      Array [
-        Object {
-          "description": "Lehrtafel von Carl von Tubeuf",
-          "name": "Lathraea squamaria",
-          "source": "1.png",
-        },
-        Object {
-          "name": "Oedogonium diplandrum Juranyi",
-          "source": "2.png",
-        },
-        Object {
-          "name": "Nicotiana Tabacum L.",
-          "source": "3.png",
-        },
-      ]
-    }
+    selectedPlants={Array []}
   />
 </div>
 `;

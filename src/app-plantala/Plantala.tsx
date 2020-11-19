@@ -28,7 +28,6 @@ nextAction.next();
 
 interface IPlantalaState {
   plants: IPlant[],
-  selectedPlants: IPlant[],
   activePlant: IPlant,
   action: Action
 }
@@ -37,8 +36,6 @@ class Plantala extends Component {
   state: IPlantalaState = {
     // values to be displayed in <Card />
     plants: plantItems,
-    // plants selected for <AvatarGroup />
-    selectedPlants: plantItems,
     // active plant for <Plant />
     activePlant: {} as IPlant,
     // action mode to be displayed in <Main />
@@ -49,8 +46,15 @@ class Plantala extends Component {
     this.setState({action: nextAction.next().value});
   }
 
+  activatePlant = (selectedPlant:IPlant) => {
+    const filteredArray =
+      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, active: !plant.active } : plant);
+    this.setState({ plants: filteredArray })
+  }
+
   render = () => {
-    const { plants, selectedPlants, action } = this.state;
+    const { plants, action } = this.state;
+    const selectedPlants = plants.filter((plant) => (plant.active === true));
 
     return (
       <div className="plantala">
@@ -58,7 +62,8 @@ class Plantala extends Component {
         <Main
           plants={plants}
           action={action}
-          setAction={this.setAction} />
+          setAction={this.setAction}
+          setSelectedPlant={this.activatePlant} />
         <Footer
           selectedPlants={selectedPlants} />
       </div>

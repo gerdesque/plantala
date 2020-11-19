@@ -12,9 +12,9 @@ exports[`Main in Selection mode should render correctly 1`] = `
       align="center"
       color="textPrimary"
       gutterBottom={true}
-      variant="h4"
+      variant="h5"
     >
-      Wähle bis zu 5 Karten aus
+      Wähle 5 Karten
     </WithStyles(ForwardRef(Typography))>
     <div>
       <WithStyles(ForwardRef(Grid))
@@ -44,6 +44,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
   >
     <PlantList
       plants={Array []}
+      setSelectedPlant={[MockFunction]}
     />
   </WithStyles(ForwardRef(Container))>
 </main>
@@ -61,7 +62,7 @@ exports[`Main in Start mode should render correctly 1`] = `
       align="center"
       color="textPrimary"
       gutterBottom={true}
-      variant="h4"
+      variant="h5"
     >
       Erstelle dein Mandala!
     </WithStyles(ForwardRef(Typography))>

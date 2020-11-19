@@ -10,14 +10,15 @@ import PlantList from '../plant-list/PlantList';
 describe('Main in Start mode', () => {
 
   let shallow: any;
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
+  let wrapper: any;
 
   beforeEach(() => {
     shallow = createShallow();
     wrapper = shallow(<Main
       plants = {[]}
       action = {Action.Start}
-      setAction = {jest.fn()} />);
+      setAction = {jest.fn()}
+      setSelectedPlant={jest.fn()} />);
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
@@ -35,7 +36,10 @@ describe('Main in Start mode', () => {
   });
 
   it('should display a <PlantList /> component', () => {
-    expect(wrapper.containsMatchingElement(<PlantList plants={[]} />)).toEqual(false);
+    expect(wrapper.containsMatchingElement(<PlantList
+      plants={[]}
+      setSelectedPlant={wrapper.instance.setSelectedPlant}
+    />)).toEqual(false);
   });
 
 });
@@ -43,20 +47,21 @@ describe('Main in Start mode', () => {
 describe('Main in Selection mode', () => {
 
   let shallow: any;
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
+  let wrapper: any;
 
   beforeEach(() => {
     shallow = createShallow();
     wrapper = shallow(<Main
       plants={[]}
       action = {Action.Select}
-      setAction = {jest.fn()} />);
+      setAction = {jest.fn()}
+      setSelectedPlant={jest.fn()} />);
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
-  it('should display the text "Wähle bis zu 5 Karten aus"', () => {
-    expect(wrapper.find(Typography).text()).toEqual('Wähle bis zu 5 Karten aus');
+  it('should display the text "Wähle 5 Karten"', () => {
+    expect(wrapper.find(Typography).text()).toEqual('Wähle 5 Karten');
   });
 
   it('should display a <Button /> with the text "Zur Auswahl hinzufügen"', () => {
@@ -68,7 +73,10 @@ describe('Main in Selection mode', () => {
   });
 
   it('should display a <PlantList /> component', () => {
-    expect(wrapper.containsMatchingElement(<PlantList plants={[]} />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(<PlantList
+      plants={[]}
+      setSelectedPlant={wrapper.instance.setSelectedPlant}
+    />)).toEqual(true);
   });
 
 });

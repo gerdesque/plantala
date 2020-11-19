@@ -5,7 +5,7 @@ import logo from '../logo.webp';
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.palette.primary.main,
   },
   icon: {
     marginRight: theme.spacing(2),

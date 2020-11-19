@@ -1,9 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PlantList should render correctly 1`] = `
-<WithStyles(ForwardRef(Grid))
-  container={true}
-  justify="center"
-  spacing={4}
+<Carousel
+  additionalTransfrom={0}
+  arrows={true}
+  autoPlay={false}
+  autoPlaySpeed={3000}
+  centerMode={true}
+  className=""
+  containerClass="carousel-container"
+  customTransition="all .3s linear"
+  dotListClass=""
+  draggable={true}
+  focusOnSelect={false}
+  infinite={true}
+  itemClass="image-item"
+  keyBoardControl={true}
+  minimumTouchDrag={80}
+  removeArrowOnDeviceType={
+    Array [
+      "tablet",
+      "mobile",
+    ]
+  }
+  renderButtonGroupOutside={false}
+  renderDotsOutside={true}
+  responsive={
+    Object {
+      "desktop": Object {
+        "breakpoint": Object {
+          "max": 3000,
+          "min": 1024,
+        },
+        "items": 1,
+        "partialVisibilityGutter": 10,
+      },
+      "mobile": Object {
+        "breakpoint": Object {
+          "max": 464,
+          "min": 0,
+        },
+        "items": 1,
+        "partialVisibilityGutter": 10,
+      },
+      "tablet": Object {
+        "breakpoint": Object {
+          "max": 1024,
+          "min": 464,
+        },
+        "items": 1,
+        "partialVisibilityGutter": 10,
+      },
+    }
+  }
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={1}
+  swipeable={true}
+  transitionDuration={300}
 />
 `;

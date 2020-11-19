@@ -30,6 +30,7 @@ describe('Plantala', () => {
           plants={wrapper.instance().state.plants} 
           action={wrapper.instance().state.action}
           setAction={wrapper.instance().setAction}
+          setSelectedPlant={wrapper.instance().setSelectedPlant}
         />,
         <Footer 
           selectedPlants={wrapper.instance().state.selectedPlants}

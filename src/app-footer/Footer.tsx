@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     footer: {
       padding: theme.spacing(4),
-      backgroundColor: theme.palette.primary.light,
+      backgroundColor: theme.palette.primary.main,
     },
     avatar: {
       width: theme.spacing(8),

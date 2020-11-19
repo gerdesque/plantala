@@ -23,7 +23,8 @@ export enum HeaderValue {
 interface IMainProps {
   plants: IPlant[],
   action: Action,
-  setAction: any
+  setAction: any,
+  setSelectedPlant: any
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -35,12 +36,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(4),
   },
   main: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.light,
     width: 'inherit'
   },
 }));
 
-export default function Main({ plants, action, setAction }: IMainProps) {
+export default function Main({ plants, action, setAction, setSelectedPlant }: IMainProps) {
   const classes = useStyles();
 
   return (
@@ -61,7 +62,7 @@ export default function Main({ plants, action, setAction }: IMainProps) {
       </Container>
       <Container className={classes.content} maxWidth="md">
         {action === Action.Start && <Landing /> }
-        {action === Action.Select && <PlantList plants={plants} /> }
+        {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} /> }
           {/* <Mandala /> */}
       </Container>
     </main>

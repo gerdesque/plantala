@@ -95,15 +95,15 @@ exports[`App should render correctly 1`] = `
         },
         "primary": Object {
           "contrastText": "#fff",
-          "dark": "#0069c0",
-          "light": "#6ec6ff",
-          "main": "#2196f3",
+          "dark": "rgb(32, 29, 62)",
+          "light": "#DAD8E2",
+          "main": "#2F2A5A",
         },
         "secondary": Object {
           "contrastText": "rgba(0, 0, 0, 0.87)",
-          "dark": "#ba5100",
+          "dark": "rgb(171, 178, 0)",
           "light": "#ffb053",
-          "main": "#f37f21",
+          "main": "#F5FF00",
         },
         "success": Object {
           "contrastText": "rgba(0, 0, 0, 0.87)",
