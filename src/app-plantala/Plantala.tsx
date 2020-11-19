@@ -13,6 +13,19 @@ export enum Action {
   Again = "Again"
 }
 
+function* getNextAction(): IterableIterator<Action> {
+  let current = Action.Start;
+  while (true) {
+    yield current;
+    yield Action.Select;
+    yield Action.Done;
+    yield Action.Again;
+  }
+}
+
+const nextAction = getNextAction();
+nextAction.next();
+
 interface IPlantalaState {
   plants: IPlant[],
   selectedPlants: IPlant[],
@@ -33,7 +46,7 @@ class Plantala extends Component {
   }
 
   setAction = () => {
-    this.setState({action: Action.Select});
+    this.setState({action: nextAction.next().value});
   }
 
   render = () => {
