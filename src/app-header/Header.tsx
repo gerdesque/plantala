@@ -29,4 +29,4 @@ export default function Header() {
       </AppBar>
     </div>
   )
-};
+}

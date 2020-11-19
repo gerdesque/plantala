@@ -1,4 +1,4 @@
-export const plants = [
+export const plantItems = [
   {name: 'Gummiakazie', source: 'Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.png', description: 'Acacia Senegal'},
   {name: 'Ananas', source: 'Ananas_sativus_Schult._Ananas_Ausschnitt_Bunt.png', description: 'Ananas sativus'},
   {name: 'Mohrenhirse', source: 'Andropogon_Sorghum_Brotero_var._Durrha._Mohrenhirse_Ausschnitt_Bunt.png', description: 'Andropogon Sorghum Brotero'},
@@ -7,4 +7,4 @@ export const plants = [
   
 ]
 
-export default plants;
+export default plantItems;

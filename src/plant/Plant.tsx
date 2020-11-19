@@ -16,4 +16,4 @@ export default function Plant({name, source, description}: IPlant) {
       </Typography>
     </div>
   )
-};
+}

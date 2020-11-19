@@ -3,7 +3,7 @@ import Header from '../app-header/Header';
 import Main from '../app-main/Main';
 import Footer from '../app-footer/Footer';
 import './Plantala.css';
-import { plants } from '../plants';
+import { plantItems } from '../plantItems';
 import { IPlant } from '../plant/Plant';
 
 export enum Action {
@@ -23,9 +23,9 @@ interface IPlantalaState {
 class Plantala extends Component {
   state: IPlantalaState = {
     // values to be displayed in <Card />
-    plants: plants,
+    plants: plantItems,
     // plants selected for <AvatarGroup />
-    selectedPlants: plants,
+    selectedPlants: plantItems,
     // active plant for <Plant />
     activePlant: {} as IPlant,
     // action mode to be displayed in <Main />
