@@ -2,6 +2,7 @@
 
 exports[`Landing should render correctly 1`] = `
 <WithStyles(ForwardRef(Grid))
+  className="app-landing-container"
   container={true}
   justify="center"
 >

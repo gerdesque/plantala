@@ -2,7 +2,7 @@
 
 exports[`Main in Selection mode should render correctly 1`] = `
 <main
-  className="makeStyles-main-3"
+  className="makeStyles-main-2"
 >
   <WithStyles(ForwardRef(Container))
     className="makeStyles-heroContent-1"
@@ -39,7 +39,6 @@ exports[`Main in Selection mode should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    className="makeStyles-content-2"
     maxWidth="md"
   >
     <PlantList
@@ -52,7 +51,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
 
 exports[`Main in Start mode should render correctly 1`] = `
 <main
-  className="makeStyles-main-3"
+  className="makeStyles-main-2"
 >
   <WithStyles(ForwardRef(Container))
     className="makeStyles-heroContent-1"
@@ -89,7 +88,6 @@ exports[`Main in Start mode should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    className="makeStyles-content-2"
     maxWidth="md"
   >
     <Landing />

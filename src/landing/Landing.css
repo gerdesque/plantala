@@ -1,3 +1,7 @@
+.app-landing-container {
+  padding-top: 4em;
+}
+
 .app-landing {
   width: 40vmin;
   height: auto;

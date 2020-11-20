@@ -61,6 +61,7 @@ class Plantala extends Component {
         <Header />
         <Main
           plants={plants}
+          selectedPlants={selectedPlants}
           action={action}
           setAction={this.setAction}
           setSelectedPlant={this.activatePlant} />

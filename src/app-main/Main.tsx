@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { IPlant } from '../plant/Plant';
 import Landing from '../landing/Landing';
 import PlantList from '../plant-list/PlantList';
+import Mandala from '../mandala/Mandala';
 import { Action } from '../app-plantala/Plantala';
 
 export enum ButtonValue {
@@ -22,6 +23,7 @@ export enum HeaderValue {
 
 interface IMainProps {
   plants: IPlant[],
+  selectedPlants: IPlant[],
   action: Action,
   setAction: any,
   setSelectedPlant: any
@@ -32,16 +34,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(2),
   },
-  content: {
-    paddingTop: theme.spacing(4),
-  },
   main: {
     backgroundColor: theme.palette.primary.light,
     width: 'inherit'
   },
 }));
 
-export default function Main({ plants, action, setAction, setSelectedPlant }: IMainProps) {
+export default function Main({ plants, selectedPlants, action, setAction, setSelectedPlant }: IMainProps) {
   const classes = useStyles();
 
   return (
@@ -60,9 +59,10 @@ export default function Main({ plants, action, setAction, setSelectedPlant }: IM
           </Grid>
         </div>
       </Container>
-      <Container className={classes.content} maxWidth="md">
+      <Container maxWidth="md">
         {action === Action.Start && <Landing /> }
         {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} /> }
+        {action === Action.Done && <Mandala selectedPlants={selectedPlants} /> }
           {/* <Mandala /> */}
       </Container>
     </main>

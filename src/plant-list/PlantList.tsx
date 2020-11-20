@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Card, CardActions, CardMedia, CardContent, Typography, CardHeader } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
@@ -51,22 +51,13 @@ const useStyles = makeStyles((theme) => ({
 export default function PlantList({ plants, setSelectedPlant }: IPlantListProps) {
   const classes = useStyles();
   const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      partialVisibilityGutter: 10
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      partialVisibilityGutter: 10
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
+    all: {
+      breakpoint: { max: 5000, min: 0 },
       items: 1,
       partialVisibilityGutter: 10
     }
   };
+  const [isMoving, setMoving] = useState(false);
   return (
       <Carousel
       itemClass="image-item"
@@ -75,16 +66,23 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
       infinite={true}
       autoPlay={false}
       containerClass="carousel-container"
-      customTransition="all .3s linear"
+      customTransition="all .3s ease-in-out"
       transitionDuration={300}
       centerMode={true}
       removeArrowOnDeviceType={["tablet", "mobile"]}
+      beforeChange={() => setMoving(true) }
+      afterChange={() => setMoving(false) }
     >
       {plants.map(plant => (
         <Card 
           key={plant.name}
           className={`${classes.plant} ${plant.active ? classes.active : ''}`}
-          onClick={() => setSelectedPlant(plant)}>
+          onClick={(e) => {
+            if (isMoving) {
+              e.preventDefault();
+            }
+            setSelectedPlant(plant)
+            }}>
           <CardHeader
             title={plant.name}
             className={classes.plantHeader}

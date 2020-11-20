@@ -5,7 +5,7 @@ import './Landing.css';
 
 export default function Landing() {
   return (
-    <Grid container justify="center">
+    <Grid className="app-landing-container" container justify="center">
       <img src={logo} className="app-landing" alt="Plantala" />
     </Grid>
   );
