@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Typography } from '@material-ui/core';
 import { createShallow } from '@material-ui/core/test-utils';
-import { ShallowWrapper } from 'enzyme';
 import Main from './Main';
 import { Action } from '../app-plantala/Plantala';
 import Landing from '../landing/Landing';

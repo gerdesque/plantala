@@ -6,7 +6,7 @@ exports[`Plantala should render correctly 1`] = `
 >
   <Header />
   <Main
-    action="Select"
+    action="Start"
     plants={
       Array [
         Object {

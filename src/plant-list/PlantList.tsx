@@ -80,31 +80,32 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
       centerMode={true}
       removeArrowOnDeviceType={["tablet", "mobile"]}
     >
-      {plants.map(plant => {
-        return (
-          <Card key={plant.name} className={`${classes.plant} ${plant.active ? classes.active : ''}`} onClick={() => setSelectedPlant(plant)}>
-            <CardHeader
-              title={plant.name}
-              className={classes.plantHeader}
-            />
-            <CardMedia
-              className={classes.plantMedia}
-              image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
-              title={plant.name}
-            />
-            <CardContent className={classes.plantContent}>
-              <Typography>
-                {plant.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Mehr erfahren
-              </Button>
-            </CardActions>
-          </Card>
-        );
-      })}
+      {plants.map(plant => (
+        <Card 
+          key={plant.name}
+          className={`${classes.plant} ${plant.active ? classes.active : ''}`}
+          onClick={() => setSelectedPlant(plant)}>
+          <CardHeader
+            title={plant.name}
+            className={classes.plantHeader}
+          />
+          <CardMedia
+            className={classes.plantMedia}
+            image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
+            title={plant.name}
+          />
+          <CardContent className={classes.plantContent}>
+            <Typography>
+              {plant.description}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small" color="primary">
+              Mehr erfahren
+            </Button>
+          </CardActions>
+        </Card>
+      ))}
       </Carousel>
   );
 }

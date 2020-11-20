@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 import { createShallow, createMount } from '@material-ui/core/test-utils';
 import Plantala from './Plantala';
 import Header from '../app-header/Header';
@@ -22,7 +21,7 @@ describe('Plantala', () => {
     expect(wrapper.find('div').length).toEqual(1);
   });
 
-  it('should render the Header, Main and Footer Component', () => {
+  it('should render the Header, Main and Footer component', () => {
     expect(
       wrapper.containsAllMatchingElements([
         <Header />,
@@ -38,9 +37,44 @@ describe('Plantala', () => {
       ])
     ).toEqual(true);
   });
+
+  it('updates action state', () => {
+    expect(wrapper.state('action')).toEqual('Start');
+    wrapper.instance().setAction();
+    expect(wrapper.state('action')).toEqual('Select');
+    wrapper.instance().setAction();
+    expect(wrapper.state('action')).toEqual('Done');
+    wrapper.instance().setAction();
+    expect(wrapper.state('action')).toEqual('Again');
+    wrapper.instance().setAction();
+    expect(wrapper.state('action')).toEqual('Start');
+  });
+
+  it('toogle active state for plant items', () => {
+    const plantItems = [
+      {name: 'Gummiakazie', source: 'A.png', description: 'Acacia Senegal', active: false},
+      {name: 'Ananas', source: 'A.png', description: 'Ananas sativus', active: false},
+      {name: 'Mohrenhirse', source: 'A.png', description: 'Andropogon Sorghum Brotero', active: false},
+      {name: 'Kolabaum', source: 'C.png', description: 'Cola acuminata', active: false},
+      {name: 'Muskatnussbaum', source: 'M.png', description: 'Myristica fragrans Houttuyn', active: false}, 
+    ]
+    wrapper.setState({ plants: plantItems });
+    wrapper.instance().activatePlant(plantItems[0]);
+    wrapper.instance().activatePlant(plantItems[1]);
+    wrapper.instance().activatePlant(plantItems[4]);
+    //wrapper.instance().activatePlant(plantItems[0]);
+    const filteredPlantItems = [
+      {name: 'Gummiakazie', source: 'A.png', description: 'Acacia Senegal', active: true},
+      {name: 'Ananas', source: 'A.png', description: 'Ananas sativus', active: true},
+      {name: 'Mohrenhirse', source: 'A.png', description: 'Andropogon Sorghum Brotero', active: false},
+      {name: 'Kolabaum', source: 'C.png', description: 'Cola acuminata', active: false},
+      {name: 'Muskatnussbaum', source: 'M.png', description: 'Myristica fragrans Houttuyn', active: true}, 
+    ]
+    expect(wrapper.state('plants')).toEqual(filteredPlantItems);
+  });
 });
 
-describe('mounted Plantala', () => {
+describe('Mounted Plantala', () => {
   let mount: any;
   let wrapper: any;
 
@@ -54,7 +88,7 @@ describe('mounted Plantala', () => {
     wrapper.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
     wrapper
-      .find(Button)
+      .find('button')
       .first()
       .simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
