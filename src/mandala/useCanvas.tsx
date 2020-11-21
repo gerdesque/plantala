@@ -6,13 +6,13 @@ const canvasHeight: number = 800; // TODO: Add window.innerHeight * .5
 
 function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: number) {
   
-  const imageAmount: number = 8; // TODO: Add plant.amount from 4 - 20
+  const imageAmount: number = 8 + (index * 2); // TODO: Add plant.amount from 4 - 20
   const step: number = Math.ceil(360 / imageAmount);
 
   const imageScale: number = 0.25; // TODO: Add plant.scale from 0.1 - 2
   const imageSize: number = 400; // TODO: Add plant.size
 
-  const layerScale: number = 100; // TODO: Add layer.scale in pixel from 50 - 300
+  const layerScale: number = 50; // TODO: Add layer.scale in pixel from 50 - 300
   const imageOrder: number = layerScale * (index + 1); // TODO: Add plant.order
 
   const imageRotation: number = 0; // TODO: Add plant.rotation from 0 - 360
@@ -36,11 +36,10 @@ function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: numb
       // context.translate(canvasWidth / 2, canvasHeight / 2 );
       // context.drawImage(image, dx, dy, imgX, imgY);
 
-      console.log(`name: ${plant.name}, num: ${num}, angle: ${angle}, imageSize: ${imageSize}, imageScale: ${imageScale}, rotation: ${imageRotation + step * num}, dx: ${dx}, dy: ${dy}, xr: ${xr}, yr: ${yr}`);
+      //console.log(`name: ${plant.name}, num: ${num}, angle: ${angle}, imageSize: ${imageSize}, imageScale: ${imageScale}, rotation: ${imageRotation + step * num}, dx: ${dx}, dy: ${dy}, xr: ${xr}, yr: ${yr}`);
       context.setTransform(imageScale, 0, 0, imageScale, xr, yr);
       context.rotate(r);
-      context.drawImage(image, -imageSize/2, -imageSize/2, imageSize, imageSize);
-
+      context.drawImage(image, -imageSize / 2, -imageSize / 2, imageSize, imageSize);
     }
 
     image.src = `${process.env.PUBLIC_URL}/assets/${plant.source}`;

@@ -91,11 +91,11 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
             image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
             title={plant.name}
           />
-          <CardContent className={classes.plantContent}>
+          {plant.description && <CardContent className={classes.plantContent}>
             <Typography>
               {plant.description}
             </Typography>
-          </CardContent>
+          </CardContent>}
           <CardActions>
             <Button size="small" color="primary">
               Mehr erfahren
