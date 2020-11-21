@@ -77,11 +77,10 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
         <Card 
           key={plant.name}
           className={`${classes.plant} ${plant.active ? classes.active : ''}`}
-          onClick={(e) => {
-            if (isMoving) {
-              e.preventDefault();
+          onClick={() => {
+            if (!isMoving) {
+              setSelectedPlant(plant)
             }
-            setSelectedPlant(plant)
             }}>
           <CardHeader
             title={plant.name}
