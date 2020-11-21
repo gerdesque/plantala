@@ -9,7 +9,7 @@ describe('Mandala', () => {
 
   beforeEach(() => {
     shallow = createShallow();
-    wrapper = shallow(<Mandala plants={[]} />);
+    wrapper = shallow(<Mandala selectedPlants={[]} />);
   });
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());

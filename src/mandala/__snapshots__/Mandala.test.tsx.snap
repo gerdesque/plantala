@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Mandala should render correctly 1`] = `<canvas />`;
+exports[`Mandala should render correctly 1`] = `
+<canvas
+  height={499.20000000000005}
+  onClick={[Function]}
+  width={921.6}
+/>
+`;
