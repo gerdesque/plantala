@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/plantala/static/css/main.4659edb5.chunk.css",
-    "main.js": "/plantala/static/js/main.da77fcbb.chunk.js",
-    "main.js.map": "/plantala/static/js/main.da77fcbb.chunk.js.map",
-    "runtime-main.js": "/plantala/static/js/runtime-main.0b65f11b.js",
-    "runtime-main.js.map": "/plantala/static/js/runtime-main.0b65f11b.js.map",
-    "static/js/2.42ff3717.chunk.js": "/plantala/static/js/2.42ff3717.chunk.js",
-    "static/js/2.42ff3717.chunk.js.map": "/plantala/static/js/2.42ff3717.chunk.js.map",
-    "static/js/3.3e0dce0b.chunk.js": "/plantala/static/js/3.3e0dce0b.chunk.js",
-    "static/js/3.3e0dce0b.chunk.js.map": "/plantala/static/js/3.3e0dce0b.chunk.js.map",
+    "main.css": "/plantala/static/css/main.09705738.chunk.css",
+    "main.js": "/plantala/static/js/main.a975d6ea.chunk.js",
+    "main.js.map": "/plantala/static/js/main.a975d6ea.chunk.js.map",
+    "runtime-main.js": "/plantala/static/js/runtime-main.d5dd89a5.js",
+    "runtime-main.js.map": "/plantala/static/js/runtime-main.d5dd89a5.js.map",
+    "static/css/2.73aa1a16.chunk.css": "/plantala/static/css/2.73aa1a16.chunk.css",
+    "static/js/2.f2e9653b.chunk.js": "/plantala/static/js/2.f2e9653b.chunk.js",
+    "static/js/2.f2e9653b.chunk.js.map": "/plantala/static/js/2.f2e9653b.chunk.js.map",
+    "static/js/3.2eb12a22.chunk.js": "/plantala/static/js/3.2eb12a22.chunk.js",
+    "static/js/3.2eb12a22.chunk.js.map": "/plantala/static/js/3.2eb12a22.chunk.js.map",
     "index.html": "/plantala/index.html",
     "service-worker.js": "/plantala/service-worker.js",
     "service-worker.js.map": "/plantala/service-worker.js.map",
-    "static/css/main.4659edb5.chunk.css.map": "/plantala/static/css/main.4659edb5.chunk.css.map",
-    "static/js/2.42ff3717.chunk.js.LICENSE.txt": "/plantala/static/js/2.42ff3717.chunk.js.LICENSE.txt",
-    "static/media/logo.b2544800.png": "/plantala/static/media/logo.b2544800.png"
+    "static/css/2.73aa1a16.chunk.css.map": "/plantala/static/css/2.73aa1a16.chunk.css.map",
+    "static/css/main.09705738.chunk.css.map": "/plantala/static/css/main.09705738.chunk.css.map",
+    "static/js/2.f2e9653b.chunk.js.LICENSE.txt": "/plantala/static/js/2.f2e9653b.chunk.js.LICENSE.txt",
+    "static/media/logo.5d8ee067.webp": "/plantala/static/media/logo.5d8ee067.webp",
+    "static/media/styles.css": "/plantala/static/media/revicons.e8746a62.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b65f11b.js",
-    "static/js/2.42ff3717.chunk.js",
-    "static/css/main.4659edb5.chunk.css",
-    "static/js/main.da77fcbb.chunk.js"
+    "static/js/runtime-main.d5dd89a5.js",
+    "static/css/2.73aa1a16.chunk.css",
+    "static/js/2.f2e9653b.chunk.js",
+    "static/css/main.09705738.chunk.css",
+    "static/js/main.a975d6ea.chunk.js"
   ]
 }
