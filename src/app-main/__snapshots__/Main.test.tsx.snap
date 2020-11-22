@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Main in Creating mode should render correctly 1`] = `
+<main
+  className="makeStyles-main-2"
+>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-heroContent-1"
+    maxWidth="md"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      color="textPrimary"
+      gutterBottom={true}
+      variant="h5"
+    >
+      Gestalte dein Plantala
+    </WithStyles(ForwardRef(Typography))>
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        justify="center"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          md={3}
+        >
+          <WithStyles(ForwardRef(Button))
+            color="secondary"
+            fullWidth={true}
+            onClick={[MockFunction]}
+            variant="contained"
+          >
+            Fertig
+          </WithStyles(ForwardRef(Button))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </WithStyles(ForwardRef(Container))>
+  <WithStyles(ForwardRef(Container))
+    maxWidth="md"
+  >
+    <Mandala
+      selectedPlants={Array []}
+    />
+  </WithStyles(ForwardRef(Container))>
+</main>
+`;
+
 exports[`Main in Selection mode should render correctly 1`] = `
 <main
   className="makeStyles-main-2"

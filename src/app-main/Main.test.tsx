@@ -5,6 +5,7 @@ import Main from './Main';
 import { Action } from '../app-plantala/Plantala';
 import Landing from '../landing/Landing';
 import PlantList from '../plant-list/PlantList';
+import Mandala from '../mandala/Mandala';
 
 describe('Main in Start mode', () => {
 
@@ -52,6 +53,7 @@ describe('Main in Selection mode', () => {
     shallow = createShallow();
     wrapper = shallow(<Main
       plants={[]}
+      selectedPlants={[]}
       action = {Action.Select}
       setAction = {jest.fn()}
       setSelectedPlant={jest.fn()} />);
@@ -75,6 +77,51 @@ describe('Main in Selection mode', () => {
     expect(wrapper.containsMatchingElement(<PlantList
       plants={[]}
       setSelectedPlant={wrapper.instance.setSelectedPlant}
+    />)).toEqual(true);
+  });
+
+});
+
+
+describe('Main in Creating mode', () => {
+
+  let shallow: any;
+  let wrapper: any;
+
+  beforeEach(() => {
+    shallow = createShallow();
+    wrapper = shallow(<Main
+      plants={[]}
+      selectedPlants={[]}
+      action = {Action.Done}
+      setAction = {jest.fn()}
+      setSelectedPlant={jest.fn()} />);
+  });
+
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
+
+  it('should display the text "Gestalte dein Plantala"', () => {
+    expect(wrapper.find(Typography).text()).toEqual('Gestalte dein Plantala');
+  });
+
+  it('should display a <Button /> with the text "Fertig"', () => {
+    expect(wrapper.find(Button).text()).toEqual('Fertig');
+  });
+
+  it('should display a <Landing /> component', () => {
+    expect(wrapper.containsMatchingElement(<Landing />)).toEqual(false);
+  });
+
+  it('should display a <PlantList /> component', () => {
+    expect(wrapper.containsMatchingElement(<PlantList
+      plants={[]}
+      setSelectedPlant={wrapper.instance.setSelectedPlant}
+    />)).toEqual(false);
+  });
+
+  it('should display a <Mandala /> component', () => {
+    expect(wrapper.containsMatchingElement(<Mandala
+      selectedPlants={[]}
     />)).toEqual(true);
   });
 

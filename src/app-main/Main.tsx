@@ -31,7 +31,6 @@ interface IMainProps {
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    backgroundColor: theme.palette.background.default,
     padding: theme.spacing(2),
   },
   main: {
