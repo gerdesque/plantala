@@ -3,6 +3,7 @@ import {createShallow } from '@material-ui/core/test-utils';
 import PlantList from './PlantList';
 import { Card } from '@material-ui/core';
 import Carousel from 'react-multi-carousel';
+import { IPlant } from '../plant/Plant';
 
 describe('PlantList', () => {
 
@@ -53,6 +54,23 @@ describe('PlantList', () => {
     expect(wrapper.find(Card).first().hasClass('makeStyles-active-2')).toEqual(false);
     expect(wrapper.find(Card).at(1).hasClass('makeStyles-active-2')).toEqual(true);
     expect(wrapper.find(Card).last().hasClass('makeStyles-active-2')).toEqual(true);
+  });
+
+  it('should trigger setSelectedPlant when <Card /> component is clicked', () => {
+    const plants = [
+      {name: 'Lathraea squamaria', source: '1.png', active: false}
+    ]
+    const setSelectedPlant = jest.fn();
+    wrapper = shallow(<PlantList
+      plants={plants}
+      setSelectedPlant={setSelectedPlant}
+    />);
+
+   const handleClick = jest.spyOn(React, "useState");
+   handleClick.mockImplementation(plant => [plant, setSelectedPlant]);
+
+   wrapper.find(Card).first().simulate('click');
+   expect(setSelectedPlant).toHaveBeenCalledTimes(1);
   });
 
 });

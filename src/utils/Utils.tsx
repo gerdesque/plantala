@@ -34,6 +34,7 @@ export function calculateImage(canvasWidth:number, canvasHeight: number,
   return { imageX, imageY, imageRotation };
 }
 
+/* istanbul ignore next */
 export function drawCoordinateSystem (context:CanvasRenderingContext2D, canvasWidth:number, canvasHeight: number,) {
   for (var x = 0.5; x < canvasWidth; x += 10) {
     context.moveTo(x, 0);

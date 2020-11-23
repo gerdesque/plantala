@@ -16,6 +16,7 @@ describe('Main in Start mode', () => {
     shallow = createShallow();
     wrapper = shallow(<Main
       plants = {[]}
+      selectedPlants = {[]}
       action = {Action.Start}
       setAction = {jest.fn()}
       setSelectedPlant={jest.fn()} />);
@@ -23,8 +24,8 @@ describe('Main in Start mode', () => {
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
-  it('should display the text "Erstelle dein Mandala!"', () => {
-    expect(wrapper.find(Typography).text()).toEqual('Erstelle dein Mandala!');
+  it('should display the text "Erstelle dein Plantala!"', () => {
+    expect(wrapper.find(Typography).text()).toEqual('Erstelle dein Plantala!');
   });
 
   it('should display a <Button /> with the text "Start"', () => {
@@ -65,8 +66,8 @@ describe('Main in Selection mode', () => {
     expect(wrapper.find(Typography).text()).toEqual('Wähle 5 Karten');
   });
 
-  it('should display a <Button /> with the text "Zur Auswahl hinzufügen"', () => {
-    expect(wrapper.find(Button).text()).toEqual('Zur Auswahl hinzufügen');
+  it('should display a <Button /> with the text "Plantala erstellen"', () => {
+    expect(wrapper.find(Button).text()).toEqual('Plantala erstellen');
   });
 
   it('should display a <Landing /> component', () => {

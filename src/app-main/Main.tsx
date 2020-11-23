@@ -9,13 +9,13 @@ import { Action } from '../app-plantala/Plantala';
 
 export enum ButtonValue {
   Start = "Start",
-  Select = "Zur Auswahl hinzufügen",
+  Select = "Plantala erstellen",
   Done = "Fertig",
   Again = "Neues Plantala erstellen"
 }
 
 export enum HeaderValue {
-  Start = "Erstelle dein Mandala!",
+  Start = "Erstelle dein Plantala!",
   Select = "Wähle 5 Karten",
   Done = "Gestalte dein Plantala",
   Again = "Teile dein Plantala"
@@ -51,7 +51,7 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
         <div>
           <Grid container spacing={2} justify="center">
             <Grid item md={3}>
-              <Button variant="contained" color="secondary" fullWidth onClick={setAction}>
+              <Button variant="contained" color="secondary" fullWidth onClick={setAction} disabled={false}>
                 {ButtonValue[action]}
               </Button>
             </Grid>

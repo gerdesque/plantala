@@ -28,6 +28,7 @@ exports[`Main in Creating mode should render correctly 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="secondary"
+            disabled={false}
             fullWidth={true}
             onClick={[MockFunction]}
             variant="contained"
@@ -76,11 +77,12 @@ exports[`Main in Selection mode should render correctly 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="secondary"
+            disabled={false}
             fullWidth={true}
             onClick={[MockFunction]}
             variant="contained"
           >
-            Zur Auswahl hinzufügen
+            Plantala erstellen
           </WithStyles(ForwardRef(Button))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -111,7 +113,7 @@ exports[`Main in Start mode should render correctly 1`] = `
       gutterBottom={true}
       variant="h5"
     >
-      Erstelle dein Mandala!
+      Erstelle dein Plantala!
     </WithStyles(ForwardRef(Typography))>
     <div>
       <WithStyles(ForwardRef(Grid))
@@ -125,6 +127,7 @@ exports[`Main in Start mode should render correctly 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="secondary"
+            disabled={false}
             fullWidth={true}
             onClick={[MockFunction]}
             variant="contained"
