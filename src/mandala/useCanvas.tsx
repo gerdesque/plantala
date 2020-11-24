@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import { calculateImage, setImageValues } from '../utils/Utils';
+import { calculateImageCoordinates, calculateImageRotation, setImageValues, canvasHeight, canvasWidth } from '../utils/Utils';
 import { IPlant } from '../plant/Plant';
 
-const canvasWidth: number = 800;
-const canvasHeight: number = 800;
+
 
 function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: number) {
 
   const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
 
   for (let imageNumber = 0; imageNumber < amount; imageNumber ++) {
-    const { imageX, imageY, imageRotation } = calculateImage(canvasWidth, canvasHeight, imageNumber, amount, distance, rotation, step);
+    const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
   
     const image = new Image();
 
@@ -40,8 +40,9 @@ export function useCanvas(){
         context.clearRect( 0,0, canvasWidth, canvasHeight );
         context.setTransform(1,0,0,1,0,0);
 
-        //drawCoordinateSystem(context, canvasWidth, canvasHeight);
+        //drawCoordinateSystem(context);
 
+        // TODO: use plant.order instead of index
         plants.forEach((plant, index) => {
           drawPlants(context, plant, index); 
         });

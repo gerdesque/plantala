@@ -51,7 +51,7 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
         <div>
           <Grid container spacing={2} justify="center">
             <Grid item md={3}>
-              <Button variant="contained" color="secondary" fullWidth onClick={setAction} disabled={false}>
+              <Button variant="contained" color="secondary" fullWidth onClick={setAction} disabled={action === Action.Select && selectedPlants.length === 0}>
                 {ButtonValue[action]}
               </Button>
             </Grid>

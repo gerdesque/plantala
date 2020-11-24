@@ -1,4 +1,4 @@
-import {calculateImage, setImageValues} from './Utils';
+import {calculateImageCoordinates, calculateImageRotation, getLayerDistance, setImageValues} from './Utils';
 
 describe('Utils "setImageValues"', () => {
 
@@ -71,20 +71,111 @@ describe('Utils "setImageValues"', () => {
 
 });
 
-describe('Utils "calculateImage"', () => {
+describe('Utils "getLayerDistance"', () => {
 
-  it('should calculate image transform values', () => {
-    const canvasWidth = 400;
-    const canvasHeight = 400;
+  it('should calculate layer distance between first and second layer', () => {
+    const order = 1;
+    const distance = getLayerDistance(order);
+    expect(distance).toEqual(50);
+  });
+
+  it('should calculate layer distance between second and third layer', () => {
+    const order = 2;
+    const distance = getLayerDistance(order);
+    expect(distance).toEqual(100);
+  });
+
+  it('should calculate layer distance between third and fourth layer', () => {
+    const order = 3;
+    const distance = getLayerDistance(order);
+    expect(distance).toEqual(150);
+  });
+  
+  it('should calculate layer distance between fourth and fifth layer', () => {
+    const order = 4;
+    const distance = getLayerDistance(order);
+    expect(distance).toEqual(200);
+  });
+});
+
+describe('Utils "calculateImageCoordinates"', () => {
+
+  it('should calculate image coordinates for first out of 4 images', () => {
     const imageNumber = 0;
     const amount = 4;
     const distance = 50;
+    const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
+    expect(imageX).toEqual(450);
+    expect(imageY).toEqual(400);
+  });
+
+  it('should calculate image coordinates for second out of 4 images', () => {
+    const imageNumber = 1;
+    const amount = 4;
+    const distance = 50;
+    const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
+    expect(imageX).toEqual(400);
+    expect(imageY).toEqual(450);
+  });
+
+  it('should calculate image coordinates for third out of 4 images', () => {
+    const imageNumber = 2;
+    const amount = 4;
+    const distance = 50;
+    const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
+    expect(imageX).toEqual(350);
+    expect(imageY).toEqual(400);
+  });
+
+  it('should calculate image coordinates for fourth out of 4 images', () => {
+    const imageNumber = 3;
+    const amount = 4;
+    const distance = 50;
+    const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
+    expect(imageX).toEqual(400);
+    expect(imageY).toEqual(350);
+  });
+});
+
+describe('Utils "calculateImageRotation"', () => {
+
+  it('should calculate image rotation for first out of 4 images without additional rotation', () => {
+    const imageNumber = 0;
     const rotation = 0;
     const step = 90;
-    const { imageX, imageY, imageRotation } = calculateImage(
-      canvasWidth, canvasHeight, imageNumber, amount, distance, rotation, step);
-    expect(imageX).toEqual(250);
-    expect(imageY).toEqual(200);
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
     expect(imageRotation).toEqual(0);
+  });
+
+  it('should calculate image rotation for second out of 4 images without additional rotation', () => {
+    const imageNumber = 1;
+    const rotation = 0;
+    const step = 90;
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
+    expect(imageRotation).toEqual(Math.PI / 2);
+  });
+
+  it('should calculate image rotation for third out of 4 images without additional rotation', () => {
+    const imageNumber = 2;
+    const rotation = 0;
+    const step = 90;
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
+    expect(imageRotation).toEqual(Math.PI);
+  });
+
+  it('should calculate image rotation for fourth out of 4 images without additional rotation', () => {
+    const imageNumber = 3;
+    const rotation = 0;
+    const step = 90;
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
+    expect(imageRotation).toEqual(Math.PI * 1.5);
+  });
+
+  it('should calculate image rotation for single images with additional rotation', () => {
+    const imageNumber = 0;
+    const rotation = 45;
+    const step = 90;
+    const { imageRotation } = calculateImageRotation(imageNumber, rotation, step);
+    expect(imageRotation).toEqual(45);
   });
 });
