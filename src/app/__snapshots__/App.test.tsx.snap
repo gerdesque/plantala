@@ -102,7 +102,7 @@ exports[`App should render correctly 1`] = `
         "secondary": Object {
           "contrastText": "#fff",
           "dark": "rgb(107, 25, 79)",
-          "light": "rgb(173, 80, 142)",
+          "light": "#CD58A1",
           "main": "#992572",
         },
         "success": Object {

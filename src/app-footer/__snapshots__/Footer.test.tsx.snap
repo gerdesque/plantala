@@ -5,13 +5,71 @@ exports[`Footer should render correctly 1`] = `
   className="makeStyles-footer-1"
 >
   <WithStyles(ForwardRef(Grid))
+    alignItems="center"
     container={true}
+    direction="column"
     justify="center"
-    spacing={2}
   >
-    <WithStyles(ForwardRef(AvatarGroup))
-      max={5}
-    />
+    <WithStyles(ForwardRef(Grid))
+      className="makeStyles-plantValues-3"
+      container={true}
+      justify="center"
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Rotation
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="rotation-slider"
+        defaultValue={0}
+        max={360}
+        onChange={[Function]}
+        valueLabelDisplay="auto"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Menge
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="amount-slider"
+        defaultValue={8}
+        marks={true}
+        max={20}
+        min={4}
+        onChange={[Function]}
+        valueLabelDisplay="auto"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Größe
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="scale-slider"
+        defaultValue={1}
+        marks={true}
+        max={2}
+        min={0.1}
+        onChange={[Function]}
+        step={0.1}
+        valueLabelDisplay="auto"
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      justify="center"
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(AvatarGroup))
+        max={5}
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </footer>
 `;
