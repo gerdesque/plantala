@@ -3,6 +3,7 @@ import { Typography } from '@material-ui/core';
 
 export interface IPlant {
   active: boolean
+  highlighted?: boolean
   name: string
   source: string
   amount?: number

@@ -20,7 +20,7 @@ const Mandala = ({ selectedPlants }: IMandalaProps) => {
 
   useEffect(() => {
     setPlants(selectedPlants);
-  });
+  }, [selectedPlants, setPlants]);
 
   return (
     <canvas 

@@ -52,10 +52,21 @@ class Plantala extends Component {
     this.setState({ plants: filteredArray })
   }
 
+  highlightPlant = (selectedPlant:IPlant) => {
+    const filteredArray =
+      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, highlighted: !plant.highlighted } : { ...plant, highlighted: false });
+    this.setState({ plants: filteredArray })
+  }
+
+  plantTransform = (transformName:string, newValue:number) => {
+    const filteredArray =
+      this.state.plants.map(plant => plant.highlighted === true ? { ...plant, [transformName]: newValue } : plant);
+    this.setState({ plants: filteredArray })
+  }
+
   render = () => {
     const { plants, action } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.active === true));
-
     return (
       <div className="plantala">
         <Header />
@@ -66,7 +77,10 @@ class Plantala extends Component {
           setAction={this.setAction}
           setSelectedPlant={this.activatePlant} />
         <Footer
-          selectedPlants={selectedPlants} />
+          selectedPlants={selectedPlants}
+          setHighlightedPlant={this.highlightPlant}
+          setPlantTransform={this.plantTransform}
+           />
       </div>
     );
   }

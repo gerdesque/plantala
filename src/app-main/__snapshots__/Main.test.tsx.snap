@@ -77,7 +77,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
         >
           <WithStyles(ForwardRef(Button))
             color="secondary"
-            disabled={false}
+            disabled={true}
             fullWidth={true}
             onClick={[MockFunction]}
             variant="contained"

@@ -3,7 +3,6 @@ import { calculateImageCoordinates, calculateImageRotation, setImageValues, canv
 import { IPlant } from '../plant/Plant';
 
 
-
 function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: number) {
 
   const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
@@ -32,14 +31,13 @@ export function useCanvas(){
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [plants, setPlants] = useState([] as IPlant[]);
 
-  useEffect(()=>{
-    if (canvasRef.current) {
+  useEffect(() => {
+    if (plants.length > 0 && canvasRef.current) {
       const canvasObj = canvasRef.current;
       const context = canvasObj.getContext('2d');
       if (context) {
-        context.clearRect( 0,0, canvasWidth, canvasHeight );
         context.setTransform(1,0,0,1,0,0);
-
+        context.clearRect( 0,0, canvasWidth, canvasHeight );
         //drawCoordinateSystem(context);
 
         // TODO: use plant.order instead of index
@@ -49,7 +47,7 @@ export function useCanvas(){
 
       }
     }
-  });
+  }, [plants]);
 
   return { setPlants, canvasRef, canvasWidth, canvasHeight };
 }
