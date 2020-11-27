@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: theme.spacing(2),
     cursor: 'pointer'
   },
-  active: {
+  selected: {
     borderColor: theme.palette.secondary.main,
   },
   plantHeader: {
@@ -76,7 +76,7 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
       {plants.map(plant => (
         <Card 
           key={plant.name}
-          className={`${classes.plant} ${plant.active ? classes.active : ''}`}
+          className={`${classes.plant} ${plant.selected ? classes.selected : ''}`}
           onClick={() => {
             if (!isMoving) {
               setSelectedPlant(plant)

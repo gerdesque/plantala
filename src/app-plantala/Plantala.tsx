@@ -28,6 +28,7 @@ nextAction.next();
 
 interface IPlantalaState {
   plants: IPlant[],
+  selectedPlants: IPlant[],
   activePlant: IPlant,
   action: Action
 }
@@ -36,6 +37,8 @@ class Plantala extends Component {
   state: IPlantalaState = {
     // values to be displayed in <Card />
     plants: plantItems,
+    // active plant for <Plant />
+    selectedPlants: [],
     // active plant for <Plant />
     activePlant: {} as IPlant,
     // action mode to be displayed in <Main />
@@ -46,27 +49,29 @@ class Plantala extends Component {
     this.setState({action: nextAction.next().value});
   }
 
-  activatePlant = (selectedPlant:IPlant) => {
-    const filteredArray =
-      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, active: !plant.active } : plant);
-    this.setState({ plants: filteredArray })
+  selectedPlants = (selectedPlant:IPlant) => {
+    const selectedPlantsArray =
+      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, selected: !plant.selected } : plant);
+    this.setState({ plants: selectedPlantsArray });
   }
 
-  highlightPlant = (selectedPlant:IPlant) => {
-    const filteredArray =
-      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, highlighted: !plant.highlighted } : { ...plant, highlighted: false });
-    this.setState({ plants: filteredArray })
+  activatedPlants = (activePlant: IPlant) => {
+    const activatedPlantsArray =
+      this.state.plants.map(plant => plant === activePlant ? { ...plant, active: !plant.active } : { ...plant, active: false });  
+    this.setState({ plants: activatedPlantsArray });
   }
 
-  plantTransform = (transformName:string, newValue:number) => {
+  transformPlant = (transformedPlant: IPlant, transformName:string, newValue:number) => {
     const filteredArray =
-      this.state.plants.map(plant => plant.highlighted === true ? { ...plant, [transformName]: newValue } : plant);
-    this.setState({ plants: filteredArray })
+      this.state.plants.map(plant => plant === transformedPlant ? { ...plant, [transformName]: newValue } : plant);
+    this.setState({ plants: filteredArray });
   }
 
   render = () => {
     const { plants, action } = this.state;
-    const selectedPlants = plants.filter((plant) => (plant.active === true));
+    const selectedPlants = plants.filter((plant) => (plant.selected === true));
+    const activePlant = plants.filter((plant) => (plant.active === true))[0];
+
     return (
       <div className="plantala">
         <Header />
@@ -75,11 +80,12 @@ class Plantala extends Component {
           selectedPlants={selectedPlants}
           action={action}
           setAction={this.setAction}
-          setSelectedPlant={this.activatePlant} />
+          setSelectedPlant={this.selectedPlants} />
         <Footer
           selectedPlants={selectedPlants}
-          setHighlightedPlant={this.highlightPlant}
-          setPlantTransform={this.plantTransform}
+          activePlant={activePlant}
+          setActivePlant={this.activatedPlants}
+          transformPlant={this.transformPlant}
            />
       </div>
     );

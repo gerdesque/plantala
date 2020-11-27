@@ -2,10 +2,10 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 
 export interface IPlant {
-  active: boolean
-  highlighted?: boolean
   name: string
+  selected: boolean
   source: string
+  active?: boolean
   amount?: number
   description?: string
   order ?: number
