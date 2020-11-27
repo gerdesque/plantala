@@ -58,7 +58,7 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
           </Grid>
         </div>
       </Container>
-      <Container maxWidth="md">
+      <Container maxWidth="sm">
         {action === Action.Start && <Landing /> }
         {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} /> }
         {action === Action.Done && <Mandala selectedPlants={selectedPlants} /> }

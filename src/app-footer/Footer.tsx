@@ -15,7 +15,7 @@ interface IFooterProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     footer: {
-      padding: theme.spacing(4),
+      padding: theme.spacing(2),
       backgroundColor: theme.palette.primary.main,
     },
     avatar: {
