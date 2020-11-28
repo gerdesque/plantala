@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import logo from '../logo.webp';
+import logo from '../assets/logo.webp';
 import './Landing.css';
 
 export default function Landing() {

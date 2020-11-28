@@ -31,6 +31,6 @@ export default function LazyCardMedia({ className, image, title }: ICardMediaPro
       title={title}
     />
     : 
-    <div ref={placeholderRef} />
+    <div className={className} ref={placeholderRef} />
   );
 };

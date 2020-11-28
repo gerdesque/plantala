@@ -1,14 +1,14 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
-import FundamentalBrigadeSchlank from './Fundamental_Brigade_Schlank.ttf';
+import Proletarsk from './assets/fonts/Proletarsk.ttf';
 
-const fundamentalBrigadeSchlank = {
-  fontFamily: 'FundamentalBrigadeSchlank',
+const proletarsk = {
+  fontFamily: 'Proletarsk',
   fontStyle: 'normal',
   fontDisplay: 'swap',
   fontWeight: 400,
   src: `
-    local('FundamentalBrigadeSchlank'),
-    url(${FundamentalBrigadeSchlank}) format('truetype')
+    local('Proletarsk'),
+    url(${Proletarsk}) format('truetype')
   `,
 };
 
@@ -24,12 +24,15 @@ export let theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: 'FundamentalBrigadeSchlank, Arial',
+    fontFamily: 'Proletarsk, Arial',
+    button: {
+      textTransform: 'none'
+    }
   },
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        '@font-face': [fundamentalBrigadeSchlank],
+        '@font-face': [proletarsk],
       },
     },
   },
