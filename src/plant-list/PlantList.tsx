@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     borderColor: theme.palette.primary.main,
     borderStyle: 'solid',
-    borderWidth: theme.spacing(2),
+    borderWidth: theme.spacing(1),
     cursor: 'pointer'
   },
   selected: {
@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
     borderColor: theme.palette.common.black,
     borderStyle: 'solid',
     borderWidth: theme.spacing(0.5),
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    marginTop: theme.spacing(2),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
   },
   plantMedia: {
     paddingTop: '100%',
@@ -43,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
     borderColor: theme.palette.common.black,
     borderStyle: 'solid',
     borderWidth: theme.spacing(0.5),
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    marginTop: theme.spacing(2),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
   },
 }));
 

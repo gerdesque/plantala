@@ -1,6 +1,18 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import FundamentalBrigadeSchlank from './Fundamental_Brigade_Schlank.ttf';
 
-export const theme = createMuiTheme({
+const fundamentalBrigadeSchlank = {
+  fontFamily: 'FundamentalBrigadeSchlank',
+  fontStyle: 'normal',
+  fontDisplay: 'swap',
+  fontWeight: 400,
+  src: `
+    local('FundamentalBrigadeSchlank'),
+    url(${FundamentalBrigadeSchlank}) format('truetype')
+  `,
+};
+
+export let theme = createMuiTheme({
   palette: {
     primary: {
       light: '#D6E7E4',
@@ -11,6 +23,17 @@ export const theme = createMuiTheme({
       light: '#CD58A1'
     },
   },
+  typography: {
+    fontFamily: 'FundamentalBrigadeSchlank, Arial',
+  },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        '@font-face': [fundamentalBrigadeSchlank],
+      },
+    },
+  },
 });
+theme = responsiveFontSizes(theme);
 
 export default theme;
