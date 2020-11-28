@@ -38,7 +38,24 @@ exports[`App should render correctly 1`] = `
           "minHeight": 56,
         },
       },
-      "overrides": Object {},
+      "overrides": Object {
+        "MuiCssBaseline": Object {
+          "@global": Object {
+            "@font-face": Array [
+              Object {
+                "fontDisplay": "swap",
+                "fontFamily": "Proletarsk",
+                "fontStyle": "normal",
+                "fontWeight": 400,
+                "src": "
+    local('Proletarsk'),
+    url(Proletarsk.ttf) format('truetype')
+  ",
+              },
+            ],
+          },
+        },
+      },
       "palette": Object {
         "action": Object {
           "activatedOpacity": 0.12,
@@ -179,105 +196,146 @@ exports[`App should render correctly 1`] = `
       },
       "typography": Object {
         "body1": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "1rem",
           "fontWeight": 400,
-          "letterSpacing": "0.00938em",
           "lineHeight": 1.5,
         },
         "body2": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "0.875rem",
           "fontWeight": 400,
-          "letterSpacing": "0.01071em",
           "lineHeight": 1.43,
         },
         "button": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "0.875rem",
           "fontWeight": 500,
-          "letterSpacing": "0.02857em",
           "lineHeight": 1.75,
-          "textTransform": "uppercase",
+          "textTransform": "none",
         },
         "caption": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "0.75rem",
           "fontWeight": 400,
-          "letterSpacing": "0.03333em",
           "lineHeight": 1.66,
         },
-        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+        "fontFamily": "Proletarsk, Arial",
         "fontSize": 14,
         "fontWeightBold": 700,
         "fontWeightLight": 300,
         "fontWeightMedium": 500,
         "fontWeightRegular": 400,
         "h1": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "6rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "5.9983rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "4.7129rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "5.3556rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "3.5rem",
           "fontWeight": 300,
-          "letterSpacing": "-0.01562em",
           "lineHeight": 1.167,
         },
         "h2": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "3.75rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "3.75rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "2.9167rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "3.3333rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "2.375rem",
           "fontWeight": 300,
-          "letterSpacing": "-0.00833em",
           "lineHeight": 1.2,
         },
         "h3": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "3rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "2.9991rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "2.5707rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "2.7849rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "2rem",
           "fontWeight": 400,
-          "letterSpacing": "0em",
           "lineHeight": 1.167,
         },
         "h4": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "2.125rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "2.0243rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "1.8219rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "2.0243rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "1.5625rem",
           "fontWeight": 400,
-          "letterSpacing": "0.00735em",
           "lineHeight": 1.235,
         },
         "h5": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.5rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "1.4993rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "1.3118rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "1.4993rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "1.25rem",
           "fontWeight": 400,
-          "letterSpacing": "0em",
           "lineHeight": 1.334,
         },
         "h6": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.25rem",
+          "@media (min-width:1280px)": Object {
+            "fontSize": "1.25rem",
+          },
+          "@media (min-width:600px)": Object {
+            "fontSize": "1.25rem",
+          },
+          "@media (min-width:960px)": Object {
+            "fontSize": "1.25rem",
+          },
+          "fontFamily": "Proletarsk, Arial",
+          "fontSize": "1.125rem",
           "fontWeight": 500,
-          "letterSpacing": "0.0075em",
           "lineHeight": 1.6,
         },
         "htmlFontSize": 16,
         "overline": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "0.75rem",
           "fontWeight": 400,
-          "letterSpacing": "0.08333em",
           "lineHeight": 2.66,
           "textTransform": "uppercase",
         },
         "pxToRem": [Function],
         "round": [Function],
         "subtitle1": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "1rem",
           "fontWeight": 400,
-          "letterSpacing": "0.00938em",
           "lineHeight": 1.75,
         },
         "subtitle2": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+          "fontFamily": "Proletarsk, Arial",
           "fontSize": "0.875rem",
           "fontWeight": 500,
-          "letterSpacing": "0.00714em",
           "lineHeight": 1.57,
         },
       },

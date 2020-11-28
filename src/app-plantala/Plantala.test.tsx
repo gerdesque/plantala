@@ -34,7 +34,6 @@ describe('Plantala', () => {
         />,
         <Footer
           selectedPlants={wrapper.instance().state.selectedPlants}
-          activePlant={wrapper.instance().state.selectedPlants[0]}
           setActivePlant={wrapper.instance().activatedPlants}
           transformPlant={wrapper.instance().transformPlant}
         />
@@ -54,25 +53,23 @@ describe('Plantala', () => {
     expect(wrapper.state('action')).toEqual('Start');
   });
 
-  it('toogle select state for plant items', () => {
+  it('toggle select state for plant items', () => {
     const plantItems = [
-      {name: 'Gummiakazie', source: 'A.png', selected: false},
-      {name: 'Ananas', source: 'A.png', selected: false},
-      {name: 'Kardamom', source: 'A.png', selected: true},
+      {name: 'Gummiakazie', source: 'A.png', selected: true, order: 2},
+      {name: 'Ananas', source: 'A.png', selected: false, order: 0},
+      {name: 'Kardamom', source: 'A.png', selected: true, order: 1},
     ]
     const filteredPlantItems = [
-      {name: 'Gummiakazie', source: 'A.png', selected: true},
-      {name: 'Ananas', source: 'A.png', selected: true},
-      {name: 'Kardamom', source: 'A.png', selected: false},
+      {name: 'Gummiakazie', source: 'A.png', selected: true, order: 2},
+      {name: 'Ananas', source: 'A.png', selected: true, order: 3},
+      {name: 'Kardamom', source: 'A.png', selected: true, order: 1},
     ]
-    wrapper.setState({ plants: plantItems });
-    wrapper.instance().selectedPlants(plantItems[0]);
+    wrapper.setState({ plants: plantItems , selectedPlants: plantItems.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order ) });
     wrapper.instance().selectedPlants(plantItems[1]);
-    wrapper.instance().selectedPlants(plantItems[2]);
     expect(wrapper.state('plants')).toEqual(filteredPlantItems);
   });
 
-  it('toogle active state for plant items', () => {
+  it('toggle active state for plant items', () => {
     const plantItems = [
       {name: 'Gummiakazie', source: 'A.png', selected: true},
       {name: 'Ananas', source: 'A.png', selected: true},

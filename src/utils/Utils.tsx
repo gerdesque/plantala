@@ -3,7 +3,7 @@ import { IPlant } from '../plant/Plant';
 export const canvasWidth: number = 800;
 export const canvasHeight: number = 800;
 
-export function setImageValues(plant: IPlant, index: number) {
+export function setImageValues(plant: IPlant) {
   /* TODO
     Add plant.amount from 4 - 20
     Add plant.order
@@ -12,14 +12,13 @@ export function setImageValues(plant: IPlant, index: number) {
     Add plant.size
   */
   const { 
-    amount = 8 + (index * 2),
-    order = (index + 1),
+    amount = 6 + (plant.order * 2),
     rotation = 0,
     scale = 1,
     size = 100,
   } = plant;
 
-  const distance: number = getLayerDistance(order);
+  const distance: number = getLayerDistance(plant.order);
   const step: number = Math.ceil(360 / amount);
 
   return { amount, distance, rotation, step, scale, size };

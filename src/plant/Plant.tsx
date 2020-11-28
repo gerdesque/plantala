@@ -3,12 +3,12 @@ import { Typography } from '@material-ui/core';
 
 export interface IPlant {
   name: string
+  order: number
   selected: boolean
   source: string
   active?: boolean
   amount?: number
   description?: string
-  order ?: number
   rotation?: number
   scale?: number
   size?: number

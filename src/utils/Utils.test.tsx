@@ -3,9 +3,8 @@ import {calculateImageCoordinates, calculateImageRotation, getLayerDistance, set
 describe('Utils "setImageValues"', () => {
 
   it('should set default image value', () => {
-    const plant = {name:'Echter Muskatnussbaum',source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png', active: false};
-    const index = 0;
-    const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
+    const plant = {name:'Echter Muskatnussbaum',source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png', selected: false, order: 1};
+    const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
     expect(amount).toEqual(8);
     expect(distance).toEqual(50);
     expect(rotation).toEqual(0);
@@ -18,15 +17,14 @@ describe('Utils "setImageValues"', () => {
     const plant = {
       name:'Echter Muskatnussbaum',
       source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png',
-      active: false,
+      selected: false,
       amount: 4,
       order: 2,
       rotation: 90,
       scale: 0.25,
       size: 400
     };
-    const index = 1;
-    const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
+    const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
     expect(amount).toEqual(4);
     expect(distance).toEqual(100);
     expect(rotation).toEqual(90);
@@ -39,11 +37,11 @@ describe('Utils "setImageValues"', () => {
     const plant = {
       name:'Echter Muskatnussbaum',
       source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png',
-      active: false,
+      selected: false,
+      order: 1,
       amount: 120,
     };
-    const index = 0;
-    const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
+    const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
     expect(amount).toEqual(120);
     expect(distance).toEqual(50);
     expect(rotation).toEqual(0);
@@ -57,10 +55,10 @@ describe('Utils "setImageValues"', () => {
     const plant = {
       name:'Echter Muskatnussbaum',
       source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png',
-      active: false,
+      order: 5,
+      selected: false,
     };
-    const index = 4;
-    const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
+    const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
     expect(amount).toEqual(16);
     expect(distance).toEqual(250);
     expect(rotation).toEqual(0);

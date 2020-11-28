@@ -28,19 +28,13 @@ nextAction.next();
 
 interface IPlantalaState {
   plants: IPlant[],
-  selectedPlants: IPlant[],
-  activePlant: IPlant,
   action: Action
 }
 
 class Plantala extends Component {
   state: IPlantalaState = {
     // values to be displayed in <Card />
-    plants: plantItems,
-    // active plant for <Plant />
-    selectedPlants: [],
-    // active plant for <Plant />
-    activePlant: {} as IPlant,
+    plants: plantItems.map(plant => ({...plant, selected: false, order: 0})),
     // action mode to be displayed in <Main />
     action: Action.Start,
   }
@@ -49,27 +43,39 @@ class Plantala extends Component {
     this.setState({action: nextAction.next().value});
   }
 
+  private orderSelectedPlant(plant: IPlant, plantOrder: number): IPlant {
+    return { ...plant, selected: !plant.selected, order: plantOrder };
+  }
+
+  private reorderSelectedPlants(plant: IPlant, isSelected: boolean): IPlant {
+    return isSelected && plant.selected ? { ...plant, order: plant.order === 1 ? 1 : plant.order - 1 } : plant;
+  }
+
   selectedPlants = (selectedPlant:IPlant) => {
+    const isSelected = selectedPlant.selected;
+    const plantOrder = isSelected ? 0 : this.state.plants.filter(plant => plant.selected === true).length + 1;
     const selectedPlantsArray =
-      this.state.plants.map(plant => plant === selectedPlant ? { ...plant, selected: !plant.selected } : plant);
+      this.state.plants.map(
+        plant => plant === selectedPlant ? this.orderSelectedPlant(plant, plantOrder) : this.reorderSelectedPlants(plant, isSelected)
+      );
     this.setState({ plants: selectedPlantsArray });
   }
 
   activatedPlants = (activePlant: IPlant) => {
     const activatedPlantsArray =
-      this.state.plants.map(plant => plant === activePlant ? { ...plant, active: true } : { ...plant, active: false });  
+      this.state.plants.map(plant => plant === activePlant ? { ...plant, active: true } : { ...plant, active: false });
     this.setState({ plants: activatedPlantsArray });
   }
 
   transformPlant = (transformedPlant: IPlant, transformName:string, newValue:number) => {
-    const filteredArray =
+    const transformedPlantsArray =
       this.state.plants.map(plant => plant === transformedPlant ? { ...plant, [transformName]: newValue } : plant);
-    this.setState({ plants: filteredArray });
+    this.setState({ plants: transformedPlantsArray });
   }
 
   render = () => {
     const { plants, action } = this.state;
-    const selectedPlants = plants.filter((plant) => (plant.selected === true));
+    const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
 
     return (

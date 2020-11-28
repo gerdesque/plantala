@@ -3,9 +3,9 @@ import { calculateImageCoordinates, calculateImageRotation, setImageValues, canv
 import { IPlant } from '../plant/Plant';
 
 /* istanbul ignore next */
-function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: number) {
+function drawPlants (context:CanvasRenderingContext2D, plant:IPlant) {
 
-  const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
+  const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
 
   for (let imageNumber = 0; imageNumber < amount; imageNumber ++) {
     const { imageX, imageY } = calculateImageCoordinates(imageNumber, amount, distance);
@@ -41,9 +41,8 @@ export function useCanvas(){
         context.clearRect( 0,0, canvasWidth, canvasHeight );
         //drawCoordinateSystem(context);
 
-        // TODO: use plant.order instead of index
-        plants.forEach((plant, index) => {
-          drawPlants(context, plant, index); 
+        plants.forEach((plant) => {
+          drawPlants(context, plant);
         });
 
       }
