@@ -10,254 +10,254 @@ exports[`Plantala should render correctly 1`] = `
     plants={
       Array [
         Object {
-          "active": false,
           "name": "Gummiakazie",
+          "selected": false,
           "source": "Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Ananas",
+          "selected": false,
           "source": "Ananas_sativus_Schult. _Ananas_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "description": "Andropogon Sorghum Brotero",
           "name": "Mohrenhirse",
+          "selected": false,
           "source": "Andropogon_Sorghum_Brotero_var._Durrha._Mohrenhirse_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Erdnuss",
+          "selected": false,
           "source": "Arachis_hypogaea_Linné_Erdnuss_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Erdnuss Indischer Sesam",
+          "selected": false,
           "source": "Arachis_hypogaea,_Sesamum_indicum,_Sesamum_orientale_Erdnuss_Indischer_Sesam_Weißer_Sesam_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Traganthstrauch",
+          "selected": false,
           "source": "Astragalus_creticus_Lam. _Cretischer_Traganthstrauch_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Gemeines Bambusrohr",
+          "selected": false,
           "source": "Bambusa_arundinacea_Willd. _Gemeines_Bambusrohr_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Butterbaum",
+          "selected": false,
           "source": "Butyrospermum_Parkii_Kotschy,_Illipe_latifolia_Engler_Afrikanischer_Butterbaum,_Mahwabaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Spanischer Pfeffer",
+          "selected": false,
           "source": "Capsicum_longum_DC. _Spanischer_Pfeffer_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Spanischer Pfeffer II",
+          "selected": false,
           "source": "Capsicum_longum_DC._Spanischer_Pfeffer_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Papaya",
+          "selected": false,
           "source": "Carica_Papaya_Linné_Melonenbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Edelkastanie",
+          "selected": false,
           "source": "Castanea_vulgaris_Edelkastanie_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Fieberrindenbaum",
+          "selected": false,
           "source": "Cinchona_Calisaya_var_ Josephiana_Weddell_Fieberrindenbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kampferbaum",
+          "selected": false,
           "source": "Cinnamomum_Camphora_Nees_et_Eberm._Kampferbaum_Ausschnitt_bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kolabaum",
+          "selected": false,
           "source": "Cola_acuminata_R._Brown_Kolabaum_Ausschnitt_bunt.png",
         },
         Object {
-          "active": false,
           "name": "Eingerollte Farnpalme II",
+          "selected": false,
           "source": "Cycas_circinalis_Linné_Eingerollte_Farnpalme_2tes_Teil_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Eingerollte Farnpalme",
+          "selected": false,
           "source": "Cycas_circinalis_Linné_Eingerollte_Farnpalme_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Ebenholzbaum",
+          "selected": false,
           "source": "Diospyros_Dalechamps_Ebenholzbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Echter Muskatnussbaum",
+          "selected": false,
           "source": "Echter_Muskatnussbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Afrikanische Ölpalme",
+          "selected": false,
           "source": "Elaeis_guineensis_Linné_Afrikanische_Ölpalme_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kardamompflanze",
+          "selected": false,
           "source": "Elettaria_cardamomum_White_Echte_Kardamompflanze_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kardamom",
+          "selected": false,
           "source": "Elettaria_Cardamomum_White_et_Maton_Malobar_Cardamome_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Echter Gummiguttbaum",
+          "selected": false,
           "source": "Garcinia_Hanburyi_Hooker_L._Echter_Gummiguttbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kampecheholzbaum",
+          "selected": false,
           "source": "Haematoxylon_campecheanum_Linne_Kampecheholzbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Amerikanischer Kopalbaum",
+          "selected": false,
           "source": "Hymenaea_Courbaril_L._Amerikanischer_Kopalbaum_Lokustbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Amerikanischer Kopalbaum II",
+          "selected": false,
           "source": "Hymenaea_Courbaril_L._Amerikanischer_Kopalbaum_Lokustbaum_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Amerikanischer Kopalbaum III",
+          "selected": false,
           "source": "Hymenaea_Courbaril_L._Amerikanischer_Kopalbaum_Lokustbaum_Teil3_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Paraguay Theestrauch",
+          "selected": false,
           "source": "Ilex_paraguariensis_St._Hilaire_Mate-Pflanze,_Paraguay_Theestrauch_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Indigopflanze",
+          "selected": false,
           "source": "Indigofera_tinctoria_Indigopflanze_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Gemeiner Walnussbaum",
+          "selected": false,
           "source": "Juglans_regia_Gemeiner_Walnussbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Gemeiner Walnussbaum II",
+          "selected": false,
           "source": "Juglans_regia_Gemeiner_Walnussbaum_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Schönblühende Kautschukliane",
+          "selected": false,
           "source": "Landolphia_comorensis,_var._florida_K._Schumann _Schönblühende_Kautschukliane_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Schönblühende Kautschukliane II",
+          "selected": false,
           "source": "Landolphia_comorensis,_var._florida_K._Schumann _Schönblühende_Kautschukliane_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Schönblühende Kautschukliane III",
+          "selected": false,
           "source": "Landolphia_comorensis,_var._florida_K._Schumann _Schönblühende_Kautschukliane_Teil3_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Maniokstrauch",
+          "selected": false,
           "source": "Manihot_utilissima_Pohl_Maniok-_oder_Cassavestrauch_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Pfeilwurz",
+          "selected": false,
           "source": "Maranta_arundinacea_L. _Pfeilwurz_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Pfeilwurz II",
+          "selected": false,
           "source": "Maranta_arundinacea_L. _Pfeilwurz_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Pfeilwurz III",
+          "selected": false,
           "source": "Maranta_arundinacea_L. _Pfeilwurz_Teil3_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Muskatnussbaum",
+          "selected": false,
           "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Muskatnussbaum II",
+          "selected": false,
           "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Neuseeländischer Flachs",
+          "selected": false,
           "source": "Phormium_tenax,_Agave_americana_Neuseeländischer_Flachs_Amerikanische_Agave_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Indischer Sesam",
+          "selected": false,
           "source": "Sesamum_indicum_Linné_Sesamum_orientale_Linné_Indischer_Sesam_Weisser_Sesam_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Indischer Sesam II",
+          "selected": false,
           "source": "Sesamum_indicum_Linné_Sesamum_orientale_Linné_Indischer_Sesam_Weisser_Sesam_Teil2_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Brechnussbaum",
+          "selected": false,
           "source": "Strychnos_nux_vomica_L._Brechnussbaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Amerikanischer Mahagonibaum",
+          "selected": false,
           "source": "Swietenia_Mahagoni_L._Amerikanischer_Mahagonibaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Theestrauch",
+          "selected": false,
           "source": "Thea_chinensis_Linné_Theestrauch_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Kakaobaum",
+          "selected": false,
           "source": "Theobroma_Cacao_Linné_Kakaobaum_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Vanille",
+          "selected": false,
           "source": "Vanilla_planifolia_Andrews_Vanille_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Echter Ingwer",
+          "selected": false,
           "source": "Zingiber_officinale_Roscoe_Echter_Ingwer_Ausschnitt_Bunt.png",
         },
         Object {
-          "active": false,
           "name": "Echter Ingwer II",
+          "selected": false,
           "source": "Zingiber_officinale_Roscoe_Echter_Ingwer_Teil2_Ausschnitt_Bunt.png",
         },
       ]
@@ -268,8 +268,8 @@ exports[`Plantala should render correctly 1`] = `
   />
   <Footer
     selectedPlants={Array []}
-    setHighlightedPlant={[Function]}
-    setPlantTransform={[Function]}
+    setActivePlant={[Function]}
+    transformPlant={[Function]}
   />
 </div>
 `;

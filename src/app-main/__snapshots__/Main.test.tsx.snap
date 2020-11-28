@@ -40,7 +40,7 @@ exports[`Main in Creating mode should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    maxWidth="md"
+    maxWidth="sm"
   >
     <Mandala
       selectedPlants={Array []}
@@ -89,7 +89,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    maxWidth="md"
+    maxWidth="sm"
   >
     <PlantList
       plants={Array []}
@@ -139,7 +139,7 @@ exports[`Main in Start mode should render correctly 1`] = `
     </div>
   </WithStyles(ForwardRef(Container))>
   <WithStyles(ForwardRef(Container))
-    maxWidth="md"
+    maxWidth="sm"
   >
     <Landing />
   </WithStyles(ForwardRef(Container))>

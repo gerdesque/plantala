@@ -26,14 +26,18 @@ describe('Plantala', () => {
       wrapper.containsAllMatchingElements([
         <Header />,
         <Main
-          plants={wrapper.instance().state.plants} 
+          plants={wrapper.instance().state.plants}
+          selectedPlants={wrapper.instance().state.selectedPlants}
           action={wrapper.instance().state.action}
           setAction={wrapper.instance().setAction}
-          setSelectedPlant={wrapper.instance().setSelectedPlant}
+          setSelectedPlant={wrapper.instance().selectedPlants}
         />,
-        <Footer 
+        <Footer
           selectedPlants={wrapper.instance().state.selectedPlants}
-        />,
+          activePlant={wrapper.instance().state.selectedPlants[0]}
+          setActivePlant={wrapper.instance().activatedPlants}
+          transformPlant={wrapper.instance().transformPlant}
+        />
       ])
     ).toEqual(true);
   });
@@ -50,26 +54,54 @@ describe('Plantala', () => {
     expect(wrapper.state('action')).toEqual('Start');
   });
 
-  it('toogle active state for plant items', () => {
+  it('toogle select state for plant items', () => {
     const plantItems = [
-      {name: 'Gummiakazie', source: 'A.png', description: 'Acacia Senegal', active: false},
-      {name: 'Ananas', source: 'A.png', description: 'Ananas sativus', active: false},
-      {name: 'Mohrenhirse', source: 'A.png', description: 'Andropogon Sorghum Brotero', active: false},
-      {name: 'Kolabaum', source: 'C.png', description: 'Cola acuminata', active: false},
-      {name: 'Muskatnussbaum', source: 'M.png', description: 'Myristica fragrans Houttuyn', active: false}, 
+      {name: 'Gummiakazie', source: 'A.png', selected: false},
+      {name: 'Ananas', source: 'A.png', selected: false},
+      {name: 'Kardamom', source: 'A.png', selected: true},
+    ]
+    const filteredPlantItems = [
+      {name: 'Gummiakazie', source: 'A.png', selected: true},
+      {name: 'Ananas', source: 'A.png', selected: true},
+      {name: 'Kardamom', source: 'A.png', selected: false},
     ]
     wrapper.setState({ plants: plantItems });
-    wrapper.instance().activatePlant(plantItems[0]);
-    wrapper.instance().activatePlant(plantItems[1]);
-    wrapper.instance().activatePlant(plantItems[4]);
-    //wrapper.instance().activatePlant(plantItems[0]);
-    const filteredPlantItems = [
-      {name: 'Gummiakazie', source: 'A.png', description: 'Acacia Senegal', active: true},
-      {name: 'Ananas', source: 'A.png', description: 'Ananas sativus', active: true},
-      {name: 'Mohrenhirse', source: 'A.png', description: 'Andropogon Sorghum Brotero', active: false},
-      {name: 'Kolabaum', source: 'C.png', description: 'Cola acuminata', active: false},
-      {name: 'Muskatnussbaum', source: 'M.png', description: 'Myristica fragrans Houttuyn', active: true}, 
+    wrapper.instance().selectedPlants(plantItems[0]);
+    wrapper.instance().selectedPlants(plantItems[1]);
+    wrapper.instance().selectedPlants(plantItems[2]);
+    expect(wrapper.state('plants')).toEqual(filteredPlantItems);
+  });
+
+  it('toogle active state for plant items', () => {
+    const plantItems = [
+      {name: 'Gummiakazie', source: 'A.png', selected: true},
+      {name: 'Ananas', source: 'A.png', selected: true},
+      {name: 'Kardamom', source: 'A.png', selected: true},
     ]
+    const filteredPlantItems = [
+      {name: 'Gummiakazie', source: 'A.png', selected: true, active: true},
+      {name: 'Ananas', source: 'A.png', selected: true, active: false},
+      {name: 'Kardamom', source: 'A.png', selected: true, active: false},
+    ]
+
+    wrapper.setState({ plants: plantItems });
+    wrapper.instance().activatedPlants(plantItems[0]);
+    expect(wrapper.state('plants')).toEqual(filteredPlantItems);
+  });
+
+
+  it('transform active plant in plant items', () => {
+    const plantItems = [
+      {name: 'Ananas', source: 'A.png', selected: true, active: false},
+      {name: 'Kardamom', source: 'A.png', selected: true, active: true}
+    ]
+    const filteredPlantItems = [
+      {name: 'Ananas', source: 'A.png', selected: true, active: false},
+      {name: 'Kardamom', source: 'A.png', selected: true, active: true, rotation: 100}
+    ]
+
+    wrapper.setState({ plants: plantItems });
+    wrapper.instance().transformPlant(plantItems[1], 'rotation', 100);
     expect(wrapper.state('plants')).toEqual(filteredPlantItems);
   });
 });

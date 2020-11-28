@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer should render correctly 1`] = `
+<ForwardRef(SwipeableDrawer)
+  anchor="right"
+  onClose={[Function]}
+  onOpen={[Function]}
+  open={false}
+>
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-plantValues-2"
+    container={true}
+    justify="center"
+    role="presentation"
+  >
+    <Styled(MuiBox)>
+      <WithStyles(ForwardRef(Avatar))
+        alt="Kardamom"
+        className="makeStyles-avatar-1"
+        key="Kardamom"
+        src="/assets/A.png"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Rotation
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="rotation-slider"
+        max={360}
+        onChange={[Function]}
+        value={0}
+        valueLabelDisplay="auto"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Menge
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="amount-slider"
+        marks={true}
+        max={20}
+        min={4}
+        onChange={[Function]}
+        value={8}
+        valueLabelDisplay="auto"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="rotation-slider"
+      >
+        Größe
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="scale-slider"
+        marks={true}
+        max={2}
+        min={0.1}
+        onChange={[Function]}
+        step={0.1}
+        value={1}
+        valueLabelDisplay="auto"
+      />
+    </Styled(MuiBox)>
+  </WithStyles(ForwardRef(Grid))>
+</ForwardRef(SwipeableDrawer)>
+`;

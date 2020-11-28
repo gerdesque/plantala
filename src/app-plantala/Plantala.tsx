@@ -57,7 +57,7 @@ class Plantala extends Component {
 
   activatedPlants = (activePlant: IPlant) => {
     const activatedPlantsArray =
-      this.state.plants.map(plant => plant === activePlant ? { ...plant, active: !plant.active } : { ...plant, active: false });  
+      this.state.plants.map(plant => plant === activePlant ? { ...plant, active: true } : { ...plant, active: false });  
     this.setState({ plants: activatedPlantsArray });
   }
 
@@ -80,13 +80,14 @@ class Plantala extends Component {
           selectedPlants={selectedPlants}
           action={action}
           setAction={this.setAction}
-          setSelectedPlant={this.selectedPlants} />
+          setSelectedPlant={this.selectedPlants}
+        />
         <Footer
           selectedPlants={selectedPlants}
           activePlant={activePlant}
           setActivePlant={this.activatedPlants}
           transformPlant={this.transformPlant}
-           />
+        />
       </div>
     );
   }

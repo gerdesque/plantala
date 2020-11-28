@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { calculateImageCoordinates, calculateImageRotation, setImageValues, canvasHeight, canvasWidth } from '../utils/Utils';
 import { IPlant } from '../plant/Plant';
 
-
+/* istanbul ignore next */
 function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: number) {
 
   const { amount, distance, rotation, step, scale, size } = setImageValues(plant, index);
@@ -27,6 +27,7 @@ function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, index: numb
   }
 }
 
+/* istanbul ignore next */
 export function useCanvas(){
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [plants, setPlants] = useState([] as IPlant[]);

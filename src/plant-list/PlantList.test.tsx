@@ -3,7 +3,6 @@ import {createShallow } from '@material-ui/core/test-utils';
 import PlantList from './PlantList';
 import { Card } from '@material-ui/core';
 import Carousel from 'react-multi-carousel';
-import { IPlant } from '../plant/Plant';
 
 describe('PlantList', () => {
 
@@ -30,9 +29,9 @@ describe('PlantList', () => {
 
   it('should render 3 <Card /> components', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', description: 'Lehrtafel von Carl von Tubeuf', active: false},
-      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', active: false},
-      {name: 'Nicotiana Tabacum L.', source: '3.png', active: false}
+      {name: 'Lathraea squamaria', source: '1.png', description: 'Lehrtafel von Carl von Tubeuf', selected: false},
+      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: false},
+      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: false}
     ]
     wrapper = shallow(<PlantList
       plants={plants}
@@ -43,31 +42,28 @@ describe('PlantList', () => {
   
   it('should mark 2 <Card /> components as active', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', active: false},
-      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', active: true},
-      {name: 'Nicotiana Tabacum L.', source: '3.png', active: true}
+      {name: 'Lathraea squamaria', source: '1.png', selected: false},
+      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: true},
+      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: true}
     ]
     wrapper = shallow(<PlantList
       plants={plants}
       setSelectedPlant={jest.fn()}
     />);
-    expect(wrapper.find(Card).first().hasClass('makeStyles-active-2')).toEqual(false);
-    expect(wrapper.find(Card).at(1).hasClass('makeStyles-active-2')).toEqual(true);
-    expect(wrapper.find(Card).last().hasClass('makeStyles-active-2')).toEqual(true);
+    expect(wrapper.find(Card).at(0).hasClass('makeStyles-selected-2')).toEqual(false);
+    expect(wrapper.find(Card).at(1).hasClass('makeStyles-selected-2')).toEqual(true);
+    expect(wrapper.find(Card).at(2).hasClass('makeStyles-selected-2')).toEqual(true);
   });
 
   it('should trigger setSelectedPlant when <Card /> component is clicked', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', active: false}
+      {name: 'Lathraea squamaria', source: '1.png', selected: false}
     ]
     const setSelectedPlant = jest.fn();
     wrapper = shallow(<PlantList
       plants={plants}
       setSelectedPlant={setSelectedPlant}
     />);
-
-   const handleClick = jest.spyOn(React, "useState");
-   handleClick.mockImplementation(plant => [plant, setSelectedPlant]);
 
    wrapper.find(Card).first().simulate('click');
    expect(setSelectedPlant).toHaveBeenCalledTimes(1);
