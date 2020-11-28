@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { Button, Card, CardActions, CardMedia, CardContent, Typography, CardHeader } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Typography, CardHeader } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './PlantList.css';
 import { IPlant } from '../plant/Plant';
+import LazyCardMedia from './LazyCardMedia';
 
 interface IPlantListProps {
   plants: IPlant[],
@@ -86,7 +87,7 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
             title={plant.name}
             className={classes.plantHeader}
           />
-          <CardMedia
+          <LazyCardMedia
             className={classes.plantMedia}
             image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
             title={plant.name}

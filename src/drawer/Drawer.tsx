@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar, Grid, Box, Slider, SwipeableDrawer, Typography } from '@material-ui/core';
 import { IPlant } from '../plant/Plant';
@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Drawer({activePlant, setActivePlant, transformPlant}: IDrawerProps) {
   const classes = useStyles();
-  const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setOpen(activePlant.active || false);
   }, [activePlant]);
 

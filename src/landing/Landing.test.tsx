@@ -1,12 +1,11 @@
 import React from 'react';
 import { createShallow } from '@material-ui/core/test-utils';
-import { ShallowWrapper } from 'enzyme';
 import Landing from './Landing';
 
 describe('Landing', () => {
 
   let shallow: any;
-  let wrapper: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
+  let wrapper: any;
 
   beforeEach(() => {
     shallow = createShallow();
