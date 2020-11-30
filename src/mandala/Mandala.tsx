@@ -5,6 +5,7 @@ import { IPlant } from '../plant/Plant';
 
 interface IMandalaProps {
   selectedPlants: IPlant[],
+  setPlantalaData: any
 }
 
 const useStyles = makeStyles(() => ({
@@ -14,7 +15,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Mandala = ({ selectedPlants }: IMandalaProps) => {
+const Mandala = ({ selectedPlants, setPlantalaData }: IMandalaProps) => {
   const classes = useStyles();
   const { setPlants, canvasRef, canvasWidth, canvasHeight } = useCanvas();
 
@@ -28,6 +29,7 @@ const Mandala = ({ selectedPlants }: IMandalaProps) => {
       className={classes.canvas}
       width={canvasWidth}
       height={canvasHeight}
+      onClick={() => setPlantalaData(canvasRef.current?.toDataURL())}
     />
   );
 };

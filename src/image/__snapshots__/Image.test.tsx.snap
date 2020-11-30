@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should render correctly 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  justify="center"
+>
+  <img
+    alt="Created Plantala"
+    src=""
+  />
+</WithStyles(ForwardRef(Grid))>
+`;

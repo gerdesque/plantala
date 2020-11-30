@@ -29,7 +29,8 @@ nextAction.next();
 
 interface IPlantalaState {
   plants: IPlant[],
-  action: Action
+  action: Action,
+  plantalaData: string
 }
 
 class Plantala extends Component {
@@ -38,6 +39,7 @@ class Plantala extends Component {
     plants: plantItems.map(plant => ({...plant, selected: false, order: 0})),
     // action mode to be displayed in <Main />
     action: Action.Start,
+    plantalaData: ''
   }
 
   setAction = () => {
@@ -66,8 +68,12 @@ class Plantala extends Component {
     this.setState({ plants: transformedPlantsArray });
   }
 
+  setPlantalaData = (plantalaData: string) => {
+    this.setState({ plantalaData: plantalaData });
+  }
+
   render = () => {
-    const { plants, action } = this.state;
+    const { plants, action, plantalaData } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
 
@@ -80,6 +86,8 @@ class Plantala extends Component {
           action={action}
           setAction={this.setAction}
           setSelectedPlant={this.selectedPlants}
+          plantalaData={plantalaData}
+          setPlantalaData={this.setPlantalaData}
         />
         <Footer
           selectedPlants={selectedPlants}

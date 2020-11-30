@@ -7,6 +7,7 @@ exports[`Plantala should render correctly 1`] = `
   <Header />
   <Main
     action="Start"
+    plantalaData=""
     plants={
       Array [
         Object {
@@ -314,6 +315,7 @@ exports[`Plantala should render correctly 1`] = `
     }
     selectedPlants={Array []}
     setAction={[Function]}
+    setPlantalaData={[Function]}
     setSelectedPlant={[Function]}
   />
   <Footer

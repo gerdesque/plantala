@@ -4,6 +4,7 @@ exports[`Mandala should render correctly 1`] = `
 <canvas
   className="makeStyles-canvas-1"
   height={800}
+  onClick={[Function]}
   width={800}
 />
 `;

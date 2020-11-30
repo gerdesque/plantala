@@ -5,6 +5,7 @@ import { IPlant } from '../plant/Plant';
 import Landing from '../landing/Landing';
 import PlantList from '../plant-list/PlantList';
 import Mandala from '../mandala/Mandala';
+import Image from '../image/Image';
 import { Action } from '../app-plantala/Plantala';
 
 export enum ButtonValue {
@@ -26,7 +27,9 @@ interface IMainProps {
   selectedPlants: IPlant[],
   action: Action,
   setAction: any,
-  setSelectedPlant: any
+  setSelectedPlant: any,
+  setPlantalaData: any
+  plantalaData: string
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Main({ plants, selectedPlants, action, setAction, setSelectedPlant }: IMainProps) {
+export default function Main({ plants, selectedPlants, action, setAction, setSelectedPlant, setPlantalaData, plantalaData }: IMainProps) {
   const classes = useStyles();
 
   return (
@@ -61,8 +64,8 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
       <Container maxWidth="sm">
         {action === Action.Start && <Landing /> }
         {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} /> }
-        {action === Action.Done && <Mandala selectedPlants={selectedPlants} /> }
-          {/* <Mandala /> */}
+        {action === Action.Done && <Mandala selectedPlants={selectedPlants} setPlantalaData={setPlantalaData} /> }
+        {action === Action.Again && <Image plantalaData={plantalaData} /> }
       </Container>
     </main>
   );
