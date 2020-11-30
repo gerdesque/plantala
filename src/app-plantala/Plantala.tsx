@@ -5,6 +5,7 @@ import Footer from '../app-footer/Footer';
 import './Plantala.css';
 import { plantItems } from '../plantItems';
 import { IPlant } from '../plant/Plant';
+import { orderSelectedPlant, reorderSelectedPlant } from '../utils/Utils';
 
 export enum Action {
   Start = "Start",
@@ -43,20 +44,12 @@ class Plantala extends Component {
     this.setState({action: nextAction.next().value});
   }
 
-  private orderSelectedPlant(plant: IPlant, plantOrder: number): IPlant {
-    return { ...plant, selected: !plant.selected, order: plantOrder };
-  }
-
-  private reorderSelectedPlants(plant: IPlant, isSelected: boolean): IPlant {
-    return isSelected && plant.selected ? { ...plant, order: plant.order === 1 ? 1 : plant.order - 1 } : plant;
-  }
-
   selectedPlants = (selectedPlant:IPlant) => {
     const isSelected = selectedPlant.selected;
     const plantOrder = isSelected ? 0 : this.state.plants.filter(plant => plant.selected === true).length + 1;
     const selectedPlantsArray =
       this.state.plants.map(
-        plant => plant === selectedPlant ? this.orderSelectedPlant(plant, plantOrder) : this.reorderSelectedPlants(plant, isSelected)
+        plant => plant === selectedPlant ? orderSelectedPlant(plant, plantOrder) : reorderSelectedPlant(plant, isSelected)
       );
     this.setState({ plants: selectedPlantsArray });
   }

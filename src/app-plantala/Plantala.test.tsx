@@ -53,7 +53,7 @@ describe('Plantala', () => {
     expect(wrapper.state('action')).toEqual('Start');
   });
 
-  it('toggle select state for plant items', () => {
+  it('toggle select state for plant items without being selected', () => {
     const plantItems = [
       {name: 'Gummiakazie', source: 'A.png', selected: true, order: 2},
       {name: 'Ananas', source: 'A.png', selected: false, order: 0},
@@ -66,6 +66,22 @@ describe('Plantala', () => {
     ]
     wrapper.setState({ plants: plantItems , selectedPlants: plantItems.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order ) });
     wrapper.instance().selectedPlants(plantItems[1]);
+    expect(wrapper.state('plants')).toEqual(filteredPlantItems);
+  });
+
+  it('toggle select state for plant items when selected', () => {
+    const plantItems = [
+      {name: 'Gummiakazie', source: 'A.png', selected: true, order: 2},
+      {name: 'Ananas', source: 'A.png', selected: false, order: 0},
+      {name: 'Kardamom', source: 'A.png', selected: true, order: 1},
+    ]
+    const filteredPlantItems = [
+      {name: 'Gummiakazie', source: 'A.png', selected: true, order: 1},
+      {name: 'Ananas', source: 'A.png', selected: false, order: 0},
+      {name: 'Kardamom', source: 'A.png', selected: false, order: 0},
+    ]
+    wrapper.setState({ plants: plantItems , selectedPlants: plantItems.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order ) });
+    wrapper.instance().selectedPlants(plantItems[2]);
     expect(wrapper.state('plants')).toEqual(filteredPlantItems);
   });
 

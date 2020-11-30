@@ -23,7 +23,15 @@ export function setImageValues(plant: IPlant) {
 
   return { amount, distance, rotation, step, scale, size };
 }
-  
+
+export function orderSelectedPlant(plant: IPlant, plantOrder: number): IPlant {
+  return { ...plant, selected: !plant.selected, order: plantOrder };
+}
+
+export function reorderSelectedPlant(plant: IPlant, isSelected: boolean): IPlant {
+  return isSelected && plant.selected ? { ...plant, order: plant.order === 1 ? 1 : plant.order - 1 } : plant;
+}
+
 export function getLayerDistance(order:number) {
   //TODO: Add layer.scale in pixel from 50 - 300
   return 50 * order;

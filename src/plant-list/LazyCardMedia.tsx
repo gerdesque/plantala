@@ -11,8 +11,8 @@ export default function LazyCardMedia({ className, image, title }: ICardMediaPro
   const [isVisible, setVisible] = useState<boolean>(false);
   const placeholderRef = useRef<HTMLDivElement>(null);
 
+  /* istanbul ignore next */
   useEffect(() => {
-
     if (!isVisible && placeholderRef.current) {
       const observer = new IntersectionObserver(([{ intersectionRatio }]) => {
         if (intersectionRatio > 0) {
@@ -33,4 +33,4 @@ export default function LazyCardMedia({ className, image, title }: ICardMediaPro
     : 
     <div className={className} ref={placeholderRef} />
   );
-};
+}

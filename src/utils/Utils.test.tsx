@@ -1,4 +1,40 @@
-import {calculateImageCoordinates, calculateImageRotation, getLayerDistance, setImageValues} from './Utils';
+import {orderSelectedPlant, reorderSelectedPlant, calculateImageCoordinates, calculateImageRotation, getLayerDistance, setImageValues} from './Utils';
+
+describe('Utils "orderSelectedPlant"', () => {
+
+  it('order selected plant', () => {
+    const plant = {name: 'Kardamom', source: 'A.png', selected: false, order: 0}
+    const plantOrder = 1
+    const orderedPlant = orderSelectedPlant(plant, plantOrder);
+    expect(orderedPlant).toEqual({name: 'Kardamom', source: 'A.png', selected: true, order: 1});
+  });
+
+  it('order deselected plant', () => {
+    const plant = {name: 'Kardamom', source: 'A.png', selected: true, order: 4}
+    const plantOrder = 0
+    const orderedPlant = orderSelectedPlant(plant, plantOrder);
+    expect(orderedPlant).toEqual({name: 'Kardamom', source: 'A.png', selected: false, order: 0});
+  });
+
+});
+
+describe('Utils "reorderSelectedPlants"', () => {
+
+  it('reorder first selected plant', () => {
+    const plant = {name: 'Kardamom', source: 'A.png', selected: true, order: 1}
+    const isSelected = true
+    const reorderedPlant = reorderSelectedPlant(plant, isSelected);
+    expect(reorderedPlant).toEqual({name: 'Kardamom', source: 'A.png', selected: true, order: 1});
+  });
+
+  it('reorder second selected plant', () => {
+    const plant = {name: 'Kardamom', source: 'A.png', selected: true, order: 2}
+    const isSelected = true
+    const reorderedPlant = reorderSelectedPlant(plant, isSelected);
+    expect(reorderedPlant).toEqual({name: 'Kardamom', source: 'A.png', selected: true, order: 1});
+  });
+
+});
 
 describe('Utils "setImageValues"', () => {
 
