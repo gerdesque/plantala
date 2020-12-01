@@ -4,6 +4,7 @@ import { Avatar, Grid } from '@material-ui/core';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import { IPlant } from '../plant/Plant';
 import Drawer from '../drawer/Drawer';
+import { avatarCount } from '../utils/Utils';
 
 interface IFooterProps {
   selectedPlants: IPlant[],
@@ -29,9 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Footer({selectedPlants, activePlant, setActivePlant, transformPlant}: IFooterProps) {
   const classes = useStyles();
-
-  //TODO: Use plant.order for avatar count
-  const avatarCount = 5;
   const avatars = selectedPlants.slice(0, avatarCount).map(plant =>
     <Avatar
       key={plant.name}
@@ -44,7 +42,7 @@ export default function Footer({selectedPlants, activePlant, setActivePlant, tra
   return (
     <footer className={classes.footer}>
       <Grid container spacing={2} justify="center">
-        <AvatarGroup max={5}>
+        <AvatarGroup max={avatarCount}>
           {avatars}
         </AvatarGroup>
         {activePlant && <Drawer

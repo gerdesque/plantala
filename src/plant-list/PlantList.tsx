@@ -6,10 +6,12 @@ import "react-multi-carousel/lib/styles.css";
 import './PlantList.css';
 import { IPlant } from '../plant/Plant';
 import LazyCardMedia from './LazyCardMedia';
+import { avatarCount } from '../utils/Utils';
 
 interface IPlantListProps {
   plants: IPlant[],
-  setSelectedPlant: any
+  setSelectedPlant: any,
+  selectedPlants: IPlant[],
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
+    marginTop: -theme.spacing(6),
+    marginLeft: -theme.spacing(6),
   },
   plantContent: {
     backgroundColor: theme.palette.primary.light,
@@ -57,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PlantList({ plants, setSelectedPlant }: IPlantListProps) {
+export default function PlantList({ plants, setSelectedPlant, selectedPlants }: IPlantListProps) {
   const classes = useStyles();
   const responsive = {
     all: {
@@ -67,12 +70,13 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
     }
   };
   const [isMoving, setMoving] = useState(false);
+  const isPlantListFull = selectedPlants.length === avatarCount;
 
   const [fadePlant, setFadingPlant] = useState({} as IPlant);
   function selectCard(plant: IPlant):void {
     if (plant.selected) {
       setSelectedPlant(plant);
-    } else {
+    } else if (!isPlantListFull) {
       setFadingPlant(plant);
       setTimeout(function () {
         setFadingPlant(plant)
@@ -118,7 +122,7 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
             key={plant.name}
             alt={plant.name}
             src={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
-            className={`${classes.plantAvatar} ${fadePlant ? 'fade' : ''}`}
+            className={`${classes.plantAvatar} ${fadePlant === plant ? 'fade' : ''}`}
           />}
           {plant.description && <CardContent className={classes.plantContent}>
             <Typography>

@@ -1,5 +1,7 @@
 import { IPlant } from '../plant/Plant';
 
+export const avatarCount = 5;
+
 export const canvasWidth: number = 800;
 export const canvasHeight: number = 800;
 
