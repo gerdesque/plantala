@@ -8,3 +8,15 @@
   filter: brightness(1);
   transform: perspective(800px) translate3d(0, 0, 25px);
 }
+
+.fade {
+  animation: fadeDown 1s forwards cubic-bezier(.67,.17,.32,.95);
+  opacity: 1;
+}
+
+@keyframes fadeDown {
+  100% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+}

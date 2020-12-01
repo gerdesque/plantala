@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, Card, CardActions, CardContent, Typography, CardHeader } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Typography, CardHeader, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -38,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
   plantMedia: {
     paddingTop: '100%',
   },
+  plantAvatar: {
+    width: theme.spacing(12),
+    height: theme.spacing(12),
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
   plantContent: {
     backgroundColor: theme.palette.primary.light,
     borderColor: theme.palette.common.black,
@@ -59,6 +67,20 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
     }
   };
   const [isMoving, setMoving] = useState(false);
+
+  const [fadePlant, setFadingPlant] = useState({} as IPlant);
+  function selectCard(plant: IPlant):void {
+    if (plant.selected) {
+      setSelectedPlant(plant);
+    } else {
+      setFadingPlant(plant);
+      setTimeout(function () {
+        setFadingPlant(plant)
+        setSelectedPlant(plant)
+      }, 500);
+    }
+  }
+
   return (
       <Carousel
       itemClass="image-item"
@@ -80,7 +102,7 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
           className={`${classes.plant} ${plant.selected ? classes.selected : ''}`}
           onClick={() => {
             if (!isMoving) {
-              setSelectedPlant(plant)
+              selectCard(plant)
             }
             }}>
           <CardHeader
@@ -92,6 +114,12 @@ export default function PlantList({ plants, setSelectedPlant }: IPlantListProps)
             image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
             title={plant.name}
           />
+          {fadePlant === plant && <Avatar
+            key={plant.name}
+            alt={plant.name}
+            src={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
+            className={`${classes.plantAvatar} ${fadePlant ? 'fade' : ''}`}
+          />}
           {plant.description && <CardContent className={classes.plantContent}>
             <Typography>
               {plant.description}
