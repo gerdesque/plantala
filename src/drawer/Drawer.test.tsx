@@ -41,8 +41,8 @@ describe('Drawer', () => {
     expect(wrapper.find(Avatar)).toHaveLength(1);
   });
 
-  it('should display 3 <Slider /> components', () => {
-    expect(wrapper.find(Slider)).toHaveLength(3);
+  it('should display 4 <Slider /> components', () => {
+    expect(wrapper.find(Slider)).toHaveLength(4);
   });
 
   it('should transform active plant when rotation <Slider /> component has changed', () => {
@@ -58,6 +58,11 @@ describe('Drawer', () => {
   it('should transform active plant when scale <Slider /> component has changed', () => {
     wrapper.find(Slider).at(2).simulate('change', undefined, 2);
     expect(transformPlant).toHaveBeenCalledWith(activePlant, 'scale', 2);
+  });
+
+  it('should transform active plant when distance <Slider /> component has changed', () => {
+    wrapper.find(Slider).at(3).simulate('change', undefined, 100);
+    expect(transformPlant).toHaveBeenCalledWith(activePlant, 'distance', 100);
   });
 
 });

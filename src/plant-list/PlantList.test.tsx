@@ -13,6 +13,7 @@ describe('PlantList', () => {
     shallow = createShallow();
     wrapper = shallow(<PlantList
       plants={[]}
+      selectedPlants={[]}
       setSelectedPlant={jest.fn()}
     />);
   });
@@ -29,12 +30,13 @@ describe('PlantList', () => {
 
   it('should render 3 <Card /> components', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', description: 'Lehrtafel von Carl von Tubeuf', selected: false},
-      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: false},
-      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: false}
+      {name: 'Lathraea squamaria', source: '1.png', description: 'Lehrtafel von Carl von Tubeuf', selected: false, order: 1},
+      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: false, order: 2},
+      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: false, order: 3}
     ]
     wrapper = shallow(<PlantList
       plants={plants}
+      selectedPlants={plants}
       setSelectedPlant={jest.fn()}
     />);
     expect(wrapper.find(Card)).toHaveLength(plants.length);
@@ -42,12 +44,13 @@ describe('PlantList', () => {
   
   it('should mark 2 <Card /> components as active', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', selected: false},
-      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: true},
-      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: true}
+      {name: 'Lathraea squamaria', source: '1.png', selected: false, order: 1},
+      {name: 'Oedogonium diplandrum Juranyi', source: '2.png', selected: true, order: 2},
+      {name: 'Nicotiana Tabacum L.', source: '3.png', selected: true, order: 3}
     ]
     wrapper = shallow(<PlantList
       plants={plants}
+      selectedPlants={plants}
       setSelectedPlant={jest.fn()}
     />);
     expect(wrapper.find(Card).at(0).hasClass('makeStyles-selected-2')).toEqual(false);
@@ -57,11 +60,12 @@ describe('PlantList', () => {
 
   it('should trigger setSelectedPlant when <Card /> component is clicked', () => {
     const plants = [
-      {name: 'Lathraea squamaria', source: '1.png', selected: false}
+      {name: 'Lathraea squamaria', source: '1.png', selected: false, order: 1}
     ]
     const setSelectedPlant = jest.fn();
     wrapper = shallow(<PlantList
       plants={plants}
+      selectedPlants={[]}
       setSelectedPlant={setSelectedPlant}
     />);
 

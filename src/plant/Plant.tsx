@@ -9,12 +9,13 @@ export interface IPlant {
   active?: boolean
   amount?: number
   description?: string
+  distance?: number
   rotation?: number
   scale?: number
   size?: number
 }
 
-export default function Plant({name, source, description}: IPlant) {
+export default function Plant({name}: IPlant) {
 
   return (
     <div className="plant">

@@ -93,6 +93,7 @@ exports[`Main in Selection mode should render correctly 1`] = `
   >
     <PlantList
       plants={Array []}
+      selectedPlants={Array []}
       setSelectedPlant={[MockFunction]}
     />
   </WithStyles(ForwardRef(Container))>

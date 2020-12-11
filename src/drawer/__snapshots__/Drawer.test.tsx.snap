@@ -8,7 +8,7 @@ exports[`Drawer should render correctly 1`] = `
   open={false}
 >
   <WithStyles(ForwardRef(Grid))
-    className="makeStyles-plantValues-2"
+    className="makeStyles-drawer-2"
     container={true}
     justify="center"
     role="presentation"
@@ -41,7 +41,6 @@ exports[`Drawer should render correctly 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Slider))
         aria-labelledby="amount-slider"
-        marks={true}
         max={20}
         min={4}
         onChange={[Function]}
@@ -56,12 +55,25 @@ exports[`Drawer should render correctly 1`] = `
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(Slider))
         aria-labelledby="scale-slider"
-        marks={true}
         max={2}
         min={0.1}
         onChange={[Function]}
         step={0.1}
         value={1}
+        valueLabelDisplay="auto"
+      />
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="distance-slider"
+      >
+        Abstand
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="distance-slider"
+        max={300}
+        min={50}
+        onChange={[Function]}
+        value={50}
         valueLabelDisplay="auto"
       />
     </Styled(MuiBox)>

@@ -20,7 +20,7 @@ export function setImageValues(plant: IPlant) {
     size = 100,
   } = plant;
 
-  const distance: number = getLayerDistance(plant.order);
+  const distance: number = getLayerDistance(plant.distance, plant.order);
   const step: number = Math.ceil(360 / amount);
 
   return { amount, distance, rotation, step, scale, size };
@@ -34,9 +34,8 @@ export function reorderSelectedPlant(plant: IPlant, isSelected: boolean): IPlant
   return isSelected && plant.selected ? { ...plant, order: plant.order === 1 ? 1 : plant.order - 1 } : plant;
 }
 
-export function getLayerDistance(order:number) {
-  //TODO: Add layer.scale in pixel from 50 - 300
-  return 50 * order;
+export function getLayerDistance(distance: number = 50, order:number) {
+  return distance * order;
 }
 
 export function calculateImageCoordinates(imageNumber: number, amount: number, distance: number) {

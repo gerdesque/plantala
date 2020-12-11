@@ -55,6 +55,35 @@ exports[`App should render correctly 1`] = `
             ],
           },
         },
+        "MuiSlider": Object {
+          "active": Object {},
+          "rail": Object {
+            "borderRadius": 4,
+            "height": 8,
+          },
+          "root": Object {
+            "color": "#52af77",
+            "height": 8,
+          },
+          "thumb": Object {
+            "&:focus, &:hover, &$active": Object {
+              "boxShadow": "inherit",
+            },
+            "backgroundColor": "#fff",
+            "border": "2px solid currentColor",
+            "height": 24,
+            "marginLeft": -12,
+            "marginTop": -8,
+            "width": 24,
+          },
+          "track": Object {
+            "borderRadius": 4,
+            "height": 8,
+          },
+          "valueLabel": Object {
+            "left": "calc(-50% + 4px)",
+          },
+        },
       },
       "palette": Object {
         "action": Object {

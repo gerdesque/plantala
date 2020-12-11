@@ -19,8 +19,9 @@ const useStyles = makeStyles((theme: Theme) =>
       borderWidth: '2px',
       cursor: 'pointer'
     },
-    plantValues: {
+    drawer: {
       padding: theme.spacing(4),
+      width: 200,
     }
   }),
 );
@@ -49,7 +50,7 @@ export default function Drawer({activePlant, setActivePlant, transformPlant}: ID
   };
 
   const selectedPlant = (
-    <Grid container justify="center" className={classes.plantValues} role="presentation">
+    <Grid container justify="center" className={classes.drawer} role="presentation">
       <Box>
       <Avatar
         key={activePlant.name}
@@ -73,7 +74,6 @@ export default function Drawer({activePlant, setActivePlant, transformPlant}: ID
       <Slider
         aria-labelledby="amount-slider"
         valueLabelDisplay="auto"
-        marks
         min={4}
         max={20}
         value={activePlant.amount || 8}
@@ -85,12 +85,22 @@ export default function Drawer({activePlant, setActivePlant, transformPlant}: ID
       <Slider
         aria-labelledby="scale-slider"
         valueLabelDisplay="auto"
-        marks
         min={0.1}
         step={0.1}
         max={2}
         value={activePlant.scale || 1}
         onChange={(_event, newValue) => { transformPlant(activePlant, 'scale', newValue) }}
+      />
+      <Typography id="distance-slider" gutterBottom>
+        Abstand
+      </Typography>
+      <Slider
+        aria-labelledby="distance-slider"
+        valueLabelDisplay="auto"
+        min={50}
+        max={300}
+        value={activePlant.distance || 50}
+        onChange={(_event, newValue) => { transformPlant(activePlant, 'distance', newValue) }}
       />
       </Box>
     </Grid>

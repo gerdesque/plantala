@@ -55,6 +55,7 @@ describe('Utils "setImageValues"', () => {
       source:'Echter_Muskatnussbaum_Ausschnitt_Bunt.png',
       selected: false,
       amount: 4,
+      distance: 50,
       order: 2,
       rotation: 90,
       scale: 0.25,
@@ -109,26 +110,30 @@ describe('Utils "getLayerDistance"', () => {
 
   it('should calculate layer distance between first and second layer', () => {
     const order = 1;
-    const distance = getLayerDistance(order);
-    expect(distance).toEqual(50);
+    const distance = 50;
+    const layerDistance = getLayerDistance(distance, order);
+    expect(layerDistance).toEqual(50);
   });
 
   it('should calculate layer distance between second and third layer', () => {
     const order = 2;
-    const distance = getLayerDistance(order);
-    expect(distance).toEqual(100);
+    const distance = 50;
+    const layerDistance = getLayerDistance(distance, order);
+    expect(layerDistance).toEqual(100);
   });
 
   it('should calculate layer distance between third and fourth layer', () => {
     const order = 3;
-    const distance = getLayerDistance(order);
-    expect(distance).toEqual(150);
+    const distance = 50;
+    const layerDistance = getLayerDistance(distance, order);
+    expect(layerDistance).toEqual(150);
   });
   
   it('should calculate layer distance between fourth and fifth layer', () => {
     const order = 4;
-    const distance = getLayerDistance(order);
-    expect(distance).toEqual(200);
+    const distance = 50;
+    const layerDistance = getLayerDistance(distance, order);
+    expect(layerDistance).toEqual(200);
   });
 });
 
