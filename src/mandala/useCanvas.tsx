@@ -23,7 +23,7 @@ function drawPlants (context:CanvasRenderingContext2D, plant:IPlant) {
       // context.strokeRect(-size / 2, -size / 2, size, size);
     }
 
-    image.src = `${process.env.PUBLIC_URL}/assets/${plant.source}`;
+    image.src = require('../assets/' + plant.source).default;
   }
 }
 

@@ -34,7 +34,7 @@ export default function Footer({selectedPlants, activePlant, setActivePlant, tra
     <Avatar
       key={plant.name}
       alt={plant.name}
-      src={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
+      src={require('../assets/' + plant.source).default}
       className={classes.avatar}
       onClick={() => setActivePlant(plant)}
     />);

@@ -55,7 +55,7 @@ export default function Drawer({activePlant, setActivePlant, transformPlant}: ID
       <Avatar
         key={activePlant.name}
         alt={activePlant.name}
-        src={`${process.env.PUBLIC_URL}/assets/${activePlant.source}`}
+        src={require('../assets/' + activePlant.source).default}
         className={classes.avatar}
       />
       <Typography id="rotation-slider" gutterBottom>
