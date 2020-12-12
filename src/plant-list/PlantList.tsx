@@ -123,7 +123,7 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
           />
           <LazyCardMedia
             className={classes.plantMedia}
-            image={`${process.env.PUBLIC_URL}/assets/${plant.source}`}
+            image={require('../assets/' + plant.source)}
             title={plant.name}
           />
           {fadePlant === plant && <Avatar

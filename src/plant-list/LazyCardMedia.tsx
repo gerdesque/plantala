@@ -3,7 +3,7 @@ import { CardMedia } from '@material-ui/core'
 
 interface ICardMediaProp {
   className: string,
-  image: string,
+  image: any,
   title: string,
 }
 
@@ -27,7 +27,7 @@ export default function LazyCardMedia({ className, image, title }: ICardMediaPro
     ? 
     <CardMedia
       className={className}
-      image={image}
+      image={image.default}
       title={title}
     />
     : 
