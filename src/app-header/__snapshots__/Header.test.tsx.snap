@@ -13,10 +13,17 @@ exports[`Header should render correctly 1`] = `
         src="logo.webp"
       />
       <WithStyles(ForwardRef(Typography))
+        className="makeStyles-title-3"
         variant="h2"
       >
         Plantala
       </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="delete"
+        onClick={[Function]}
+      >
+        <InvertColorsIcon />
+      </WithStyles(ForwardRef(IconButton))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
 </div>

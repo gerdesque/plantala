@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import { Button, Card, CardActions, CardContent, Typography, CardHeader, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
@@ -7,6 +7,7 @@ import './PlantList.css';
 import { IPlant } from '../plant/Plant';
 import LazyCardMedia from './LazyCardMedia';
 import { avatarCount } from '../utils/Utils';
+import { AppContext } from '../app-plantala/Context';
 
 interface IPlantListProps {
   plants: IPlant[],
@@ -79,6 +80,8 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
   };
   const [isMoving, setMoving] = useState(false);
   const isPlantListFull = selectedPlants.length === avatarCount;
+  const colorMode = useContext(AppContext);
+  const colorPath = colorMode ? '_Bunt' : '_SW';
 
   const [fadePlant, setFadingPlant] = useState({} as IPlant);
   function selectCard(plant: IPlant):void {
@@ -123,13 +126,13 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
           />
           <LazyCardMedia
             className={classes.plantMedia}
-            image={require('../assets/' + plant.source).default}
+            image={require('../assets/' + plant.source + colorPath + '.png').default}
             title={plant.name}
           />
           {fadePlant === plant && <Avatar
             key={plant.name}
             alt={plant.name}
-            src={require('../assets/' + plant.source).default}
+            src={require('../assets/' + plant.source + colorPath + '.png').default}
             className={`${classes.plantAvatar} ${fadePlant === plant ? 'fade' : ''}`}
           />}
           {plant.description && <CardContent className={classes.plantContent}>

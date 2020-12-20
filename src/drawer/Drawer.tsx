@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Avatar, Grid, Box, Slider, SwipeableDrawer, Typography } from '@material-ui/core';
 import { IPlant } from '../plant/Plant';
+import { AppContext } from '../app-plantala/Context';
 
 interface IDrawerProps {
   activePlant: IPlant,
@@ -28,6 +29,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Drawer({activePlant, setActivePlant, transformPlant}: IDrawerProps) {
   const classes = useStyles();
+  const colorMode = useContext(AppContext);
+  const colorPath = colorMode ? '_Bunt' : '_SW';
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -55,7 +58,7 @@ export default function Drawer({activePlant, setActivePlant, transformPlant}: ID
       <Avatar
         key={activePlant.name}
         alt={activePlant.name}
-        src={require('../assets/' + activePlant.source).default}
+        src={require('../assets/' + activePlant.source + colorPath + '.png').default}
         className={classes.avatar}
       />
       <Typography id="rotation-slider" gutterBottom>

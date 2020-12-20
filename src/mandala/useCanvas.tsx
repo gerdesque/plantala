@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import { calculateImageCoordinates, calculateImageRotation, setImageValues, canvasHeight, canvasWidth } from '../utils/Utils';
 import { IPlant } from '../plant/Plant';
+import { AppContext } from '../app-plantala/Context';
 
 /* istanbul ignore next */
-function drawPlants (context:CanvasRenderingContext2D, plant:IPlant) {
+function drawPlants (context:CanvasRenderingContext2D, plant:IPlant, colorPath: string) {
 
   const { amount, distance, rotation, step, scale, size } = setImageValues(plant);
 
@@ -23,7 +24,7 @@ function drawPlants (context:CanvasRenderingContext2D, plant:IPlant) {
       // context.strokeRect(-size / 2, -size / 2, size, size);
     }
 
-    image.src = require('../assets/' + plant.source).default;
+    image.src = require('../assets/' + plant.source + colorPath + '.png').default;
   }
 }
 
@@ -31,6 +32,8 @@ function drawPlants (context:CanvasRenderingContext2D, plant:IPlant) {
 export function useCanvas(){
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [plants, setPlants] = useState([] as IPlant[]);
+  const colorMode = useContext(AppContext);
+  const colorPath = colorMode ? '_Bunt' : '_SW';
 
   useEffect(() => {
     if (plants.length > 0 && canvasRef.current) {
@@ -42,12 +45,12 @@ export function useCanvas(){
         //drawCoordinateSystem(context);
 
         plants.forEach((plant) => {
-          drawPlants(context, plant);
+          drawPlants(context, plant, colorPath);
         });
 
       }
     }
-  }, [plants]);
+  }, [plants, colorPath]);
 
   return { setPlants, canvasRef, canvasWidth, canvasHeight };
 }
