@@ -1,10 +1,14 @@
 import React from 'react';
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
+import VolumeOffIcon from '@material-ui/icons/VolumeOff';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../assets/logo.webp';
 
 interface IHeaderProps {
+  isPlaying: boolean
+  setSound: any
   setColorMode: any
 }
 
@@ -22,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ setColorMode }: IHeaderProps) {
+export default function Header({ isPlaying, setSound, setColorMode }: IHeaderProps) {
   const classes = useStyles();
 
   return (
@@ -33,7 +37,10 @@ export default function Header({ setColorMode }: IHeaderProps) {
           <Typography variant="h2" className={classes.title}>
             Plantala
           </Typography>
-          <IconButton aria-label="delete" onClick={() => setColorMode()}>
+          <IconButton aria-label="invert" onClick={() => setSound(isPlaying)}>
+            {isPlaying ? <VolumeOffIcon /> : <VolumeUpIcon />}
+          </IconButton>
+          <IconButton aria-label="invert" onClick={() => setColorMode()}>
             <InvertColorsIcon />
           </IconButton>
         </Toolbar>

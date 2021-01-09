@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Sound, {ReactSoundProps} from 'react-sound';
+import soundURL from '../assets/sounds/background.mp3';
 import { AppContext } from './Context';
 import Header from '../app-header/Header';
 import Main from '../app-main/Main';
@@ -29,20 +31,29 @@ const nextAction = getNextAction();
 nextAction.next();
 
 interface IPlantalaState {
+  sound: ReactSoundProps['playStatus'],
+  isPlaying: boolean,
   colorMode: boolean,
   plants: IPlant[],
   action: Action,
-  plantalaData: string
+  plantalaData: string,
+  
 }
 
 class Plantala extends Component {
   state: IPlantalaState = {
+    isPlaying: false,
+    sound: 'STOPPED',
     colorMode: true,
     // values to be displayed in <Card />
     plants: plantItems.map(plant => ({...plant, selected: false, order: 0})),
     // action mode to be displayed in <Main />
     action: Action.Start,
     plantalaData: ''
+  }
+
+  setSound = (isPlaying: boolean) => {
+    this.setState({isPlaying: !isPlaying, sound: !isPlaying ? 'PLAYING' : 'PAUSED'});
   }
 
   setColorMode = () => {
@@ -80,14 +91,21 @@ class Plantala extends Component {
   }
 
   render = () => {
-    const { colorMode, plants, action, plantalaData } = this.state;
+    const { isPlaying, sound, colorMode, plants, action, plantalaData } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
 
     return (
       <div className="plantala">
+        <Sound
+          url={soundURL}
+          loop={true}
+          playStatus={sound}
+        />
         <AppContext.Provider value={colorMode}>
           <Header
+            isPlaying={isPlaying}
+            setSound={this.setSound}
             setColorMode={this.setColorMode}
           />
           <Main
