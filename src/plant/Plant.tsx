@@ -6,6 +6,8 @@ export interface IPlant {
   order: number
   selected: boolean
   source: string
+  link?: string
+  wiki?: string
   active?: boolean
   amount?: number
   description?: string

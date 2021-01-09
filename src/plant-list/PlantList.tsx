@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import { Button, Card, CardActions, CardContent, CardHeader, Avatar } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardHeader, Avatar, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -62,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     hyphens: 'auto',
   },
+  plantActions: {
+    justifyContent: 'space-evenly'
+  }
 }));
 
 export default function PlantList({ plants, setSelectedPlant, selectedPlants }: IPlantListProps) {
@@ -141,10 +144,9 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
           {plant.description && <CardContent className={classes.plantContent}>
             <Description description={plant.description} />
           </CardContent>}
-          <CardActions>
-            <Button size="small" color="secondary">
-              Mehr erfahren
-            </Button>
+          <CardActions className={classes.plantActions}>
+            <Link href={plant.wiki} color="secondary" target="_blank" rel="noreferrer" > {'Mehr erfahren'} </Link>
+            <Link href={plant.link} color="secondary" target="_blank" rel="noreferrer" > {'Zur Quelle'} </Link>
           </CardActions>
         </Card>
       ))}
