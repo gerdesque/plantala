@@ -1,11 +1,12 @@
 import React, {useContext, useState} from 'react';
-import { Button, Card, CardActions, CardContent, Typography, CardHeader, Avatar } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, CardHeader, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './PlantList.css';
 import { IPlant } from '../plant/Plant';
 import LazyCardMedia from './LazyCardMedia';
+import Description from './Description';
 import { avatarCount } from '../utils/Utils';
 import { AppContext } from '../app-plantala/Context';
 
@@ -58,6 +59,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
+    padding: theme.spacing(1),
+    hyphens: 'auto',
   },
 }));
 
@@ -136,9 +139,7 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
             className={`${classes.plantAvatar} ${fadePlant === plant ? 'fade' : ''}`}
           />}
           {plant.description && <CardContent className={classes.plantContent}>
-            <Typography>
-              {plant.description}
-            </Typography>
+            <Description description={plant.description} />
           </CardContent>}
           <CardActions>
             <Button size="small" color="secondary">

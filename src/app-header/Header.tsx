@@ -40,7 +40,7 @@ export default function Header({ setStart, isPlaying, setSound, setColorMode }: 
             Plantala
           </Typography>
           <IconButton aria-label="invert" onClick={() => setSound(isPlaying)}>
-            {isPlaying ? <VolumeOffIcon /> : <VolumeUpIcon />}
+            {isPlaying ? <VolumeUpIcon /> : <VolumeOffIcon />}
           </IconButton>
           <IconButton aria-label="invert" onClick={() => setColorMode()}>
             <InvertColorsIcon />
