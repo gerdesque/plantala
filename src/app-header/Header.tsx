@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import logo from '../assets/logo.webp';
 
 interface IHeaderProps {
+  setStart: any
   isPlaying: boolean
   setSound: any
   setColorMode: any
@@ -19,21 +20,22 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
     height: theme.spacing(8),
-    width: theme.spacing(8)
+    width: theme.spacing(8),
+    cursor: 'pointer'
   },
   title: {
     flexGrow: 1,
   },
 }));
 
-export default function Header({ isPlaying, setSound, setColorMode }: IHeaderProps) {
+export default function Header({ setStart, isPlaying, setSound, setColorMode }: IHeaderProps) {
   const classes = useStyles();
 
   return (
     <div>
       <AppBar position="relative" className={classes.header}>
         <Toolbar>
-          <img src={logo} className={classes.icon} alt="Plantala logo" />
+          <img src={logo} className={classes.icon} alt="Plantala logo" onClick={() => setStart()} />
           <Typography variant="h2" className={classes.title}>
             Plantala
           </Typography>

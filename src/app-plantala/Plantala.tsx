@@ -52,6 +52,10 @@ class Plantala extends Component {
     plantalaData: ''
   }
 
+  setStart = () => {
+    this.setState({action: Action.Start});
+  }
+
   setSound = (isPlaying: boolean) => {
     this.setState({isPlaying: !isPlaying, sound: !isPlaying ? 'PLAYING' : 'PAUSED'});
   }
@@ -104,6 +108,7 @@ class Plantala extends Component {
         />
         <AppContext.Provider value={colorMode}>
           <Header
+            setStart={this.setStart}
             isPlaying={isPlaying}
             setSound={this.setSound}
             setColorMode={this.setColorMode}
