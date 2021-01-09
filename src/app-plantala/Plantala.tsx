@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sound, {ReactSoundProps} from 'react-sound';
 import soundURL from '../assets/sounds/background.mp3';
 import { AppContext } from './Context';
+import Imprint from './Imprint';
 import Header from '../app-header/Header';
 import Main from '../app-main/Main';
 import Footer from '../app-footer/Footer';
@@ -34,6 +35,7 @@ interface IPlantalaState {
   sound: ReactSoundProps['playStatus'],
   isPlaying: boolean,
   colorMode: boolean,
+  imprint: boolean,
   plants: IPlant[],
   action: Action,
   plantalaData: string,
@@ -45,6 +47,7 @@ class Plantala extends Component {
     isPlaying: false,
     sound: 'STOPPED',
     colorMode: true,
+    imprint: false,
     // values to be displayed in <Card />
     plants: plantItems.map(plant => ({...plant, selected: false, order: 0})),
     // action mode to be displayed in <Main />
@@ -64,6 +67,14 @@ class Plantala extends Component {
     this.setState({colorMode: !this.state.colorMode});
   }
 
+  setImprint = () => {
+    this.setState({imprint: true});
+  }
+
+  handleImprintClose = () => {
+    this.setState({imprint: false});
+  }
+  
   setAction = () => {
     this.setState({action: nextAction.next().value});
   }
@@ -95,7 +106,7 @@ class Plantala extends Component {
   }
 
   render = () => {
-    const { isPlaying, sound, colorMode, plants, action, plantalaData } = this.state;
+    const { isPlaying, sound, colorMode, imprint, plants, action, plantalaData } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
 
@@ -106,12 +117,17 @@ class Plantala extends Component {
           loop={true}
           playStatus={sound}
         />
+        <Imprint
+          open={imprint}
+          onClose={this.handleImprintClose}
+        />
         <AppContext.Provider value={colorMode}>
           <Header
             setStart={this.setStart}
             isPlaying={isPlaying}
             setSound={this.setSound}
             setColorMode={this.setColorMode}
+            setImprint={this.setImprint}
           />
           <Main
             plants={plants}

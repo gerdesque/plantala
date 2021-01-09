@@ -3,6 +3,7 @@ import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import InfoIcon from '@material-ui/icons/Info';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '../assets/logo.webp';
 
@@ -11,6 +12,7 @@ interface IHeaderProps {
   isPlaying: boolean
   setSound: any
   setColorMode: any
+  setImprint: any
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ setStart, isPlaying, setSound, setColorMode }: IHeaderProps) {
+export default function Header({ setStart, isPlaying, setSound, setColorMode, setImprint }: IHeaderProps) {
   const classes = useStyles();
 
   return (
@@ -39,11 +41,14 @@ export default function Header({ setStart, isPlaying, setSound, setColorMode }: 
           <Typography variant="h2" className={classes.title}>
             Plantala
           </Typography>
-          <IconButton aria-label="invert" onClick={() => setSound(isPlaying)}>
+          <IconButton aria-label="play music" onClick={() => setSound(isPlaying)}>
             {isPlaying ? <VolumeUpIcon /> : <VolumeOffIcon />}
           </IconButton>
-          <IconButton aria-label="invert" onClick={() => setColorMode()}>
+          <IconButton aria-label="invert color" onClick={() => setColorMode()}>
             <InvertColorsIcon />
+          </IconButton>
+          <IconButton aria-label="about" onClick={() => setImprint()}>
+            <InfoIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
