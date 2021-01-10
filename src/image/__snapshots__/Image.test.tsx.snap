@@ -5,9 +5,6 @@ exports[`Image should render correctly 1`] = `
   container={true}
   justify="center"
 >
-  <img
-    alt="Created Plantala"
-    src=""
-  />
+  <Mandala />
 </WithStyles(ForwardRef(Grid))>
 `;

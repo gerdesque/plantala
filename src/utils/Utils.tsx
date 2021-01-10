@@ -5,7 +5,7 @@ export const avatarCount = 5;
 export const canvasWidth: number = 800;
 export const canvasHeight: number = 800;
 
-export function setImageValues(plant: IPlant) {
+export function setImageValues(plant: IPlant, imageMultiplier: number) {
   /* TODO
     Add plant.amount from 4 - 20
     Add plant.order
@@ -17,10 +17,10 @@ export function setImageValues(plant: IPlant) {
     amount = 6 + (plant.order * 2),
     rotation = 0,
     scale = 1,
-    size = 100,
+    size = 100 * imageMultiplier,
   } = plant;
 
-  const distance: number = getLayerDistance(plant.distance, plant.order);
+  const distance: number = getLayerDistance(plant.distance, plant.order, imageMultiplier);
   const step: number = Math.ceil(360 / amount);
 
   return { amount, distance, rotation, step, scale, size };
@@ -34,14 +34,14 @@ export function reorderSelectedPlant(plant: IPlant, isSelected: boolean): IPlant
   return isSelected && plant.selected ? { ...plant, order: plant.order === 1 ? 1 : plant.order - 1 } : plant;
 }
 
-export function getLayerDistance(distance: number = 50, order:number) {
-  return distance * order;
+export function getLayerDistance(distance: number = 50, order:number, imageMultiplier: number) {
+  return distance * order * imageMultiplier;
 }
 
-export function calculateImageCoordinates(imageNumber: number, amount: number, distance: number) {
+export function calculateImageCoordinates(imageNumber: number, amount: number, distance: number, imageMultiplier: number) {
   const angle = (imageNumber / (amount / 2)) * Math.PI;
-  const imageX = distance * Math.cos(angle) + canvasWidth / 2;
-  const imageY = distance * Math.sin(angle) + canvasHeight / 2;
+  const imageX = distance * Math.cos(angle) + canvasWidth * imageMultiplier / 2;
+  const imageY = distance * Math.sin(angle) + canvasHeight * imageMultiplier / 2;
 
   return { imageX, imageY };
 }

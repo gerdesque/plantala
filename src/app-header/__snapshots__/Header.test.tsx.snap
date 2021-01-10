@@ -10,6 +10,7 @@ exports[`Header should render correctly 1`] = `
       <img
         alt="Plantala logo"
         className="makeStyles-icon-2"
+        onClick={[Function]}
         src="logo.webp"
       />
       <WithStyles(ForwardRef(Typography))
@@ -19,10 +20,22 @@ exports[`Header should render correctly 1`] = `
         Plantala
       </WithStyles(ForwardRef(Typography))>
       <WithStyles(ForwardRef(IconButton))
-        aria-label="delete"
+        aria-label="play music"
+        onClick={[Function]}
+      >
+        <VolumeOffIcon />
+      </WithStyles(ForwardRef(IconButton))>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="invert color"
         onClick={[Function]}
       >
         <InvertColorsIcon />
+      </WithStyles(ForwardRef(IconButton))>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="about"
+        onClick={[Function]}
+      >
+        <InfoIcon />
       </WithStyles(ForwardRef(IconButton))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>

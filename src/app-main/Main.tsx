@@ -64,8 +64,8 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
       <Container maxWidth="sm">
         {action === Action.Start && <Landing /> }
         {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} selectedPlants={selectedPlants} /> }
-        {action === Action.Done && <Mandala selectedPlants={selectedPlants} setPlantalaData={setPlantalaData} /> }
-        {action === Action.Again && <Image plantalaData={plantalaData} /> }
+        {action === Action.Done && <Mandala selectedPlants={selectedPlants} /> }
+        {action === Action.Again && <Image selectedPlants={selectedPlants} setPlantalaData={setPlantalaData} plantalaData={plantalaData} /> }
       </Container>
     </main>
   );
