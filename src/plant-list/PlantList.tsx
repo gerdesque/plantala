@@ -86,7 +86,7 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
   };
   const [isMoving, setMoving] = useState(false);
   const isPlantListFull = selectedPlants.length === avatarCount;
-  const colorMode = useContext(AppContext);
+  const [colorMode] = useContext(AppContext);
   const colorPath = colorMode ? '_Bunt' : '_SW';
 
   const [fadePlant, setFadingPlant] = useState({} as IPlant);

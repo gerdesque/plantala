@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Drawer({activePlant, setActivePlant, transformPlant}: IDrawerProps) {
   const classes = useStyles();
-  const colorMode = useContext(AppContext);
+  const [colorMode] = useContext(AppContext);
   const colorPath = colorMode ? '_Bunt' : '_SW';
   const [isOpen, setOpen] = useState(false);
 

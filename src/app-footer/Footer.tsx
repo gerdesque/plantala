@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Footer({selectedPlants, activePlant, setActivePlant, transformPlant}: IFooterProps) {
   const classes = useStyles();
-  const colorMode = useContext(AppContext);
+  const [colorMode] = useContext(AppContext);
   const colorPath = colorMode ? '_Bunt' : '_SW';
   const avatars = selectedPlants.slice(0, avatarCount).map(plant =>
     <Avatar

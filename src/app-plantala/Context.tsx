@@ -1,3 +1,3 @@
 import { createContext } from 'react';
 
-export const AppContext = createContext({} as boolean);
+export const AppContext = createContext([] as Array<any>);
