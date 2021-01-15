@@ -4,3 +4,12 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+@media print {
+  html, body { width: 210mm; height: 297mm;}
+  footer, img, button, h5 { display: none !important; }
+  .MuiAppBar-colorPrimary {box-shadow: none !important;}
+  h2::before { content: "Malen. Strahlen. "; }
+  h2::after { content: "!"; }
+  .MuiContainer-root { max-width: 1600px !important; padding: 0 !important }
+}
