@@ -14,13 +14,13 @@ export default function Description({ description }: IDescriptionProps) {
 
   return (
     <Fragment>
-      <IconButton aria-label="map" disabled>
+      <IconButton aria-label="style" disabled>
         <StyleIcon />
       </IconButton>
       <Typography>
         {descriptionParts[0]}
       </Typography>
-      <IconButton aria-label="style" disabled>
+      <IconButton aria-label="map" disabled>
         <MapIcon />
       </IconButton>
       <Typography>

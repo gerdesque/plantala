@@ -32,12 +32,6 @@ const useStyles = makeStyles((theme) => ({
   },
   plantHeader: {
     backgroundColor: theme.palette.primary.light,
-    borderColor: theme.palette.common.black,
-    borderStyle: 'solid',
-    borderWidth: theme.spacing(0.5),
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    marginTop: theme.spacing(1),
   },
   plantMedia: {
     paddingTop: '100%',
@@ -53,12 +47,6 @@ const useStyles = makeStyles((theme) => ({
   },
   plantContent: {
     backgroundColor: theme.palette.primary.light,
-    borderColor: theme.palette.common.black,
-    borderStyle: 'solid',
-    borderWidth: theme.spacing(0.5),
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    marginTop: theme.spacing(1),
     padding: theme.spacing(1),
     hyphens: 'auto',
   },
@@ -145,8 +133,8 @@ export default function PlantList({ plants, setSelectedPlant, selectedPlants }: 
             <Description description={plant.description} />
           </CardContent>}
           <CardActions className={classes.plantActions}>
-            <Link href={plant.wiki} color="secondary" target="_blank" rel="noreferrer" > {'Mehr erfahren'} </Link>
-            <Link href={plant.link} color="secondary" target="_blank" rel="noreferrer" > {'Zur Quelle'} </Link>
+            <Link href={plant.wiki} color="secondary" target="_blank" rel="noreferrer" > {'Wiki'} </Link>
+            <Link href={plant.link} color="secondary" target="_blank" rel="noreferrer" > {'Quelle'} </Link>
           </CardActions>
         </Card>
       ))}
