@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   plantHeader: {
     backgroundColor: theme.palette.primary.light,
+    hyphens: 'auto',
   },
   plantMedia: {
     paddingTop: '100%',
