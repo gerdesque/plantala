@@ -114,7 +114,7 @@ class Plantala extends Component {
     const { isPlaying, sound, colorMode, imprint, plants, action, plantalaData } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
-    const imageMultiplier = action === Action.Again ? 5 : 1;
+    const imageMultiplier = action === Action.Again ? 2 : 1;
 
     return (
       <div className="plantala">
