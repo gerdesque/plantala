@@ -4,7 +4,7 @@
 
 .app-landing {
   width: 40vh;
-  height: auto;
+  height: 100%;
   pointer-events: none;
 }
 
