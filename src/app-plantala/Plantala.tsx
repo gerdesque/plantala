@@ -76,7 +76,12 @@ class Plantala extends Component {
   }
   
   setAction = () => {
+    this.state.action === 'Again' && this.resetPlants();
     this.setState({action: nextAction.next().value});
+  }
+
+  resetPlants = () => {
+    this.setState({plants: plantItems.map(plant => ({...plant, selected: false, order: 0}))});
   }
 
   selectedPlants = (selectedPlant:IPlant) => {

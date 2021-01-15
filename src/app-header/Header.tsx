@@ -36,7 +36,7 @@ export default function Header({ setStart, isPlaying, setSound, setColorMode, se
   return (
     <div>
       <AppBar position="relative" className={classes.header}>
-        <Toolbar>
+        <Toolbar disableGutters>
           <img src={logo} className={classes.icon} alt="Plantala logo" onClick={() => setStart()} />
           <Typography variant="h2" className={classes.title}>
             Plantala

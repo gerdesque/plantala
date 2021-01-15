@@ -34,7 +34,7 @@ interface IMainProps {
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    padding: theme.spacing(2),
+    paddingTop: theme.spacing(2),
   },
   main: {
     backgroundColor: theme.palette.primary.light,
