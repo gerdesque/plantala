@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/plantala/static/css/main.68825178.chunk.css",
-    "main.js": "/plantala/static/js/main.ed12b7f2.chunk.js",
-    "main.js.map": "/plantala/static/js/main.ed12b7f2.chunk.js.map",
+    "main.css": "/plantala/static/css/main.13e3425a.chunk.css",
+    "main.js": "/plantala/static/js/main.915b5d40.chunk.js",
+    "main.js.map": "/plantala/static/js/main.915b5d40.chunk.js.map",
     "runtime-main.js": "/plantala/static/js/runtime-main.fe17d29f.js",
     "runtime-main.js.map": "/plantala/static/js/runtime-main.fe17d29f.js.map",
     "static/css/2.73aa1a16.chunk.css": "/plantala/static/css/2.73aa1a16.chunk.css",
@@ -14,7 +14,7 @@
     "service-worker.js": "/plantala/service-worker.js",
     "service-worker.js.map": "/plantala/service-worker.js.map",
     "static/css/2.73aa1a16.chunk.css.map": "/plantala/static/css/2.73aa1a16.chunk.css.map",
-    "static/css/main.68825178.chunk.css.map": "/plantala/static/css/main.68825178.chunk.css.map",
+    "static/css/main.13e3425a.chunk.css.map": "/plantala/static/css/main.13e3425a.chunk.css.map",
     "static/js/2.dbe2033b.chunk.js.LICENSE.txt": "/plantala/static/js/2.dbe2033b.chunk.js.LICENSE.txt",
     "static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.png": "/plantala/static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.6b4cdff3.png",
     "static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_SW.png": "/plantala/static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_SW.b6b5ed75.png",
@@ -125,7 +125,7 @@
     "static/js/runtime-main.fe17d29f.js",
     "static/css/2.73aa1a16.chunk.css",
     "static/js/2.dbe2033b.chunk.js",
-    "static/css/main.68825178.chunk.css",
-    "static/js/main.ed12b7f2.chunk.js"
+    "static/css/main.13e3425a.chunk.css",
+    "static/js/main.915b5d40.chunk.js"
   ]
 }
