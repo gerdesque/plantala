@@ -23,7 +23,7 @@ export default function Image({ selectedPlants, setPlantalaData, plantalaData }:
   useEffect(() => {
     var link = document.getElementById('link');
     if (link) {
-      link.setAttribute('download', 'plantala.png');
+      link.setAttribute('download', "plantala.png");
       link.setAttribute('href', plantalaData.replace("image/png", "image/octet-stream"));
       link.click();
     }
