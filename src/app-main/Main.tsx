@@ -19,7 +19,7 @@ export enum HeaderValue {
   Start = "Erstelle dein Plantala!",
   Select = "Wähle 5 Karten",
   Done = "Gestalte dein Plantala",
-  Again = "Teile dein Plantala"
+  Again = "Zeige dein Plantala!"
 }
 
 interface IMainProps {
