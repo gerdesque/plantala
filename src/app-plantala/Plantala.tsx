@@ -149,6 +149,7 @@ class Plantala extends Component {
             activePlant={activePlant}
             setActivePlant={this.activatedPlants}
             transformPlant={this.transformPlant}
+            action={action}
           />
         </AppContext.Provider>
       </div>
