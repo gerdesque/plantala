@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme: Theme) =>
     drawer: {
       padding: theme.spacing(4),
       width: 200,
+      [theme.breakpoints.down('sm')]: {
+        width: 150,
+        padding: theme.spacing(2),
+      },
     }
   }),
 );
