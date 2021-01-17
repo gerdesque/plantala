@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   plantMedia: {
     paddingTop: '100%',
+    filter: 'drop-shadow(1px 2px 3px black)'
   },
   plantAvatar: {
     width: theme.spacing(12),
