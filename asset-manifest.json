@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/plantala/static/css/main.13e3425a.chunk.css",
-    "main.js": "/plantala/static/js/main.80413441.chunk.js",
-    "main.js.map": "/plantala/static/js/main.80413441.chunk.js.map",
-    "runtime-main.js": "/plantala/static/js/runtime-main.fe17d29f.js",
-    "runtime-main.js.map": "/plantala/static/js/runtime-main.fe17d29f.js.map",
+    "main.js": "/plantala/static/js/main.e50b4ebe.chunk.js",
+    "main.js.map": "/plantala/static/js/main.e50b4ebe.chunk.js.map",
+    "runtime-main.js": "/plantala/static/js/runtime-main.0a7cab46.js",
+    "runtime-main.js.map": "/plantala/static/js/runtime-main.0a7cab46.js.map",
     "static/css/2.73aa1a16.chunk.css": "/plantala/static/css/2.73aa1a16.chunk.css",
-    "static/js/2.dbe2033b.chunk.js": "/plantala/static/js/2.dbe2033b.chunk.js",
-    "static/js/2.dbe2033b.chunk.js.map": "/plantala/static/js/2.dbe2033b.chunk.js.map",
-    "static/js/3.9e15ec25.chunk.js": "/plantala/static/js/3.9e15ec25.chunk.js",
-    "static/js/3.9e15ec25.chunk.js.map": "/plantala/static/js/3.9e15ec25.chunk.js.map",
+    "static/js/2.64d8510f.chunk.js": "/plantala/static/js/2.64d8510f.chunk.js",
+    "static/js/2.64d8510f.chunk.js.map": "/plantala/static/js/2.64d8510f.chunk.js.map",
+    "static/js/3.b859358b.chunk.js": "/plantala/static/js/3.b859358b.chunk.js",
+    "static/js/3.b859358b.chunk.js.map": "/plantala/static/js/3.b859358b.chunk.js.map",
     "index.html": "/plantala/index.html",
     "service-worker.js": "/plantala/service-worker.js",
     "service-worker.js.map": "/plantala/service-worker.js.map",
     "static/css/2.73aa1a16.chunk.css.map": "/plantala/static/css/2.73aa1a16.chunk.css.map",
     "static/css/main.13e3425a.chunk.css.map": "/plantala/static/css/main.13e3425a.chunk.css.map",
-    "static/js/2.dbe2033b.chunk.js.LICENSE.txt": "/plantala/static/js/2.dbe2033b.chunk.js.LICENSE.txt",
+    "static/js/2.64d8510f.chunk.js.LICENSE.txt": "/plantala/static/js/2.64d8510f.chunk.js.LICENSE.txt",
     "static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.png": "/plantala/static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_Bunt.6b4cdff3.png",
     "static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_SW.png": "/plantala/static/media/Acacia_Senegal_Gummiakazie_Ausschnitt_SW.b6b5ed75.png",
     "static/media/Ananas_sativus_Schult. _Ananas_Ausschnitt_Bunt.png": "/plantala/static/media/Ananas_sativus_Schult. _Ananas_Ausschnitt_Bunt.bf9cf8bd.png",
@@ -122,10 +122,10 @@
     "static/media/styles.css": "/plantala/static/media/revicons.e8746a62.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe17d29f.js",
+    "static/js/runtime-main.0a7cab46.js",
     "static/css/2.73aa1a16.chunk.css",
-    "static/js/2.dbe2033b.chunk.js",
+    "static/js/2.64d8510f.chunk.js",
     "static/css/main.13e3425a.chunk.css",
-    "static/js/main.80413441.chunk.js"
+    "static/js/main.e50b4ebe.chunk.js"
   ]
 }
