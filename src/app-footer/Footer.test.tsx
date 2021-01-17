@@ -4,6 +4,7 @@ import { Avatar } from '@material-ui/core';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import Footer from './Footer';
 import { IPlant } from '../plant/Plant';
+import { Action } from '../app-plantala/Plantala';
 
 describe('Footer', () => {
 
@@ -17,6 +18,7 @@ describe('Footer', () => {
       activePlant={{} as IPlant}
       setActivePlant={jest.fn()}
       transformPlant={jest.fn()}
+      action={Action.Select}
       />);
   });
 

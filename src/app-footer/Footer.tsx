@@ -9,11 +9,11 @@ import { AppContext } from '../app-plantala/Context';
 import { Action } from '../app-plantala/Plantala';
 
 interface IFooterProps {
-  selectedPlants: IPlant[],
-  activePlant: IPlant,
-  setActivePlant: any,
-  transformPlant: any,
-  action: Action,
+  selectedPlants: IPlant[]
+  activePlant: IPlant
+  setActivePlant: any
+  transformPlant: any
+  action: Action
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -37,7 +37,7 @@ export default function Footer({selectedPlants, activePlant, setActivePlant, tra
   const classes = useStyles();
   const [colorMode] = useContext(AppContext);
   const colorPath = colorMode ? '_Bunt' : '_SW';
-  const isMandala = action === Action.Done; 
+  const isMandala = action === Action.Done;
   const avatars = selectedPlants.slice(0, avatarCount).map(plant =>
     <Avatar
       key={plant.name}

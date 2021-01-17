@@ -42,11 +42,10 @@ exports[`Plantala should render correctly 1`] = `
     />
     <Main
       action="Start"
-      plantalaData=""
       plants={
         Array [
           Object {
-            "description": "Hülsenfrüchtler und Mimosengewächs; verbreitet in Afrika; immergrün",
+            "description": "verbreitet in Afrika; immergrün",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461963/1/-/",
             "name": "Samen einer Senegal-Akazie",
             "order": 0,
@@ -55,7 +54,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Gummiarabikumbaum",
           },
           Object {
-            "description": "Bromeliengewächs; ursprünglich aus Amerika stammend; weltweiter Anbau in tropischen Zonen",
+            "description": "stammt aus Südamerika; weltweiter Anbau in tropischen Zonen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461320/1/",
             "name": "Blumenkronblatt einer Ananas",
             "order": 0,
@@ -64,16 +63,16 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Ananas",
           },
           Object {
-            "description": "gehört zu den Süßgräsern; stammt aus Afrika; global verbreitet als Futtergras",
+            "description": "stammt aus Afrika; global verbreitet als Futtergras",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461265/1/",
-            "name": "Saftschuppen der Mohrenhirse",
+            "name": "Saftschuppen der Sorghumhirse",
             "order": 0,
             "selected": false,
             "source": "Andropogon_Sorghum_Brotero_var._Durrha._Mohrenhirse_Ausschnitt",
-            "wiki": "",
+            "wiki": "https://de.wikipedia.org/wiki/Mohrenhirse",
           },
           Object {
-            "description": "Schmetterlingsblütler und Hülsenfrüchtler; stammt aus den Anden; die ältesten Funde sind 5000 Jahre alt",
+            "description": "ursprünglich aus den Anden; die ältesten Funde sind 5000 Jahre alt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461334/1/",
             "name": "Kelchsaum der Erdnusspflanze",
             "order": 0,
@@ -82,7 +81,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Erdnuss",
           },
           Object {
-            "description": "Schmetterlingsblütler; wächst auf Kreta; bildet dornige Polster",
+            "description": "wächst auf Kreta; bildet dornige Polster",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459303/1/",
             "name": "Samen des Kretischen Tragant",
             "order": 0,
@@ -91,7 +90,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Tragant",
           },
           Object {
-            "description": "Süßgras; kommt vor allem in den Tropen und Subtropen vor; 150 Arten weltweit",
+            "description": "wächst vor allem in den (Sub-)Tropen vor; 150 Arten weltweit",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_463210/1/",
             "name": "Ähren des Bambusrohrs",
             "order": 0,
@@ -100,7 +99,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Bambusa",
           },
           Object {
-            "description": "Heidekrautartiges Sapotengewächs; kommt in den Savannen zwischen Senegal und Uganda vor; Früchte sind Quelle für Sheabutter",
+            "description": "kommt in den Savannen südlich der Sahara vor; Früchte sind Quelle für Sheabutter",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461349/1/",
             "name": "Frucht des Karitébaums",
             "order": 0,
@@ -109,16 +108,16 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Karit%C3%A9baum",
           },
           Object {
-            "description": "Rauvolfioideae und Hundsgiftgewächs; verbreitet im tropischen Afrika und Madagaskar; sondern Kautschuk bei verletzter Rinde ab",
+            "description": "verbreitet in den Tropen Afrikas und Madagaskars; verletzte Rinde sondert Kautschuk ab",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461359/1/",
-            "name": "Blütenboden und Fruchtknoten der Kautschukliane",
+            "name": "Blütenboden der Kautschukliane",
             "order": 0,
             "selected": false,
             "source": "Landolphia_comorensis,_var._florida_K._Schumann _Schönblühende_Kautschukliane_Teil3_Ausschnitt",
             "wiki": "https://de.wikipedia.org/wiki/Rauvolfioideae",
           },
           Object {
-            "description": "Nachtschattengewächs; stammt aus Mittel- und Südamerika; Pepperoni, Chili und Paprika gehören zu dieser Art",
+            "description": "stammt aus Mittel- und Südamerika; Pepperoni, Chili und Paprika gehören zu dieser Art",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459298/1/-/",
             "name": "Blumenkrone des Spanischen Pfeffers",
             "order": 0,
@@ -127,7 +126,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Spanischer_Pfeffer",
           },
           Object {
-            "description": "Melonenbaumgewächs; kommt wild von Südmexiko bis Costa Rica vor; Papayasamen wurden in der Volksmedizin zur Entwurmung eingesetzt",
+            "description": "kommt in Süd- und Mittelamerika vor; Samen wurden früher zur Entwurmung eingesetzt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461346/1/",
             "name": "Papayafrucht",
             "order": 0,
@@ -136,7 +135,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Papaya",
           },
           Object {
-            "description": "Buchengewächs; breitet sich seit der Antike vom Mittelmeeraum nach Norden aus; Früchte (Esskastanien) essbar",
+            "description": "stammt aus dem Mittelmeeraum; Früchte (Esskastanien) essbar",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461959/1/-/",
             "name": "Blüte der Edelkastanie",
             "order": 0,
@@ -145,7 +144,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Edelkastanie",
           },
           Object {
-            "description": "Rötegewächs; wächst in Zentral- und Südamerika; aus der Rinde wird Chinin gewonnen",
+            "description": "wächst in Zentral- und Südamerika; aus der Rinde wird Chinin gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461284/1/-/",
             "name": "Blütenkrone des Chinarindenbaums",
             "order": 0,
@@ -154,7 +153,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Chinarindenb%C3%A4ume",
           },
           Object {
-            "description": "Lippenblütlerartige; stammt ursprünglich aus Indien;  aus den Samen wird u.a. Öl gewonnen",
+            "description": "stammt ursprünglich aus Indien; aus Samen wird Öl gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461357/1/-/",
             "name": "Samen des Indischen Sesams",
             "order": 0,
@@ -163,7 +162,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Sesam",
           },
           Object {
-            "description": "Lorbeergewächs; stammt aus Ostasien; aus dem Holz wird Campheröl gewonnen",
+            "description": "kommt aus Ostasien; aus dem Holz wird Campheröl gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461324/1/-/",
             "name": "Frucht des Kampferbaums",
             "order": 0,
@@ -172,8 +171,8 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Kampferbaum",
           },
           Object {
-            "description": "Stinkbaum- und Malvengewächs; stammt aus Afrika südlich der Sahara; die Kolanüsse sind Koffeeinhaltig",
-            "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461342/1/-/S",
+            "description": "ursprünglich aus Afrika südlich der Sahara; Kolanüsse sind Koffeeinhaltig",
+            "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461342/1/-/",
             "name": "Blüte des Kolabaums",
             "order": 0,
             "selected": false,
@@ -181,7 +180,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Kolab%C3%A4ume",
           },
           Object {
-            "description": "Nachtschattengewächs; stammt aus Mittel- und Südamerika; Pepperoni, Chili und Paprika gehören zu dieser Art",
+            "description": "stammt aus Mittel- und Südamerika; Pepperoni, Chili und Paprika gehören zu dieser Art",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461353/1/-/",
             "name": "Samen des Spanischen Pfeffers",
             "order": 0,
@@ -190,7 +189,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Spanischer_Pfeffer",
           },
           Object {
-            "description": "Heidekrautartige; kommt in den Tropen und Subtropen vor; manche Arten werden für die Ebenholzproduktion verwendet",
+            "description": "kommt in den (Sub-)Tropen vor; manche Arten werden als Ebenholz verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461351/1/",
             "name": "Blüte des Ebenholzbaums",
             "order": 0,
@@ -199,7 +198,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Ebenholzb%C3%A4ume",
           },
           Object {
-            "description": "Magnolienartige; Stammt von den Banda-Inseln und den nördlichen Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
+            "description": "stammt von den Banda-Inseln und den Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459328/1/-/",
             "name": "Fruchtknoten des Muskatnussbaums",
             "order": 0,
@@ -208,7 +207,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Muskatnussbaum",
           },
           Object {
-            "description": "Rauvolfioideae und Hundsgiftgewächs; verbreitet im tropischen Afrika und Madagaskar; sondern Kautschuk bei verletzter Rinde ab",
+            "description": "verbreitet in den Tropen Afrikas und Madagaskars; verletzte Rinde sondert Kautschuk ab",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461359/1/",
             "name": "Frucht der Kautschukliane",
             "order": 0,
@@ -217,7 +216,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Rauvolfioideae",
           },
           Object {
-            "description": "Palmengewächs; stammt aus den Tropen Afrikas; aus den Früchten wird Palmöl gewonnen",
+            "description": "stammt aus den Tropen Afrikas; aus den Früchten wird Palmöl gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461298/1/-/",
             "name": "Staubblattbündel der Ölpalme",
             "order": 0,
@@ -226,7 +225,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/%C3%96lpalme",
           },
           Object {
-            "description": "Ingwergewächs; stammt aus Südasien; Kapselfrüchte werden als Gewürz verwendet",
+            "description": "stammt aus Südasien; Kapselfrüchte werden als Gewürz verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459311/1/",
             "name": "Fruchtknoten des Grünen Kardamom",
             "order": 0,
@@ -235,7 +234,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Gr%C3%BCner_Kardamom",
           },
           Object {
-            "description": "Malpighienartige ; kommt vor allem in den Tropen vor;liefert den Pflanzenfarbstoff Gummigutta",
+            "description": "kommt vor allem in den Tropen vor; liefert den Pflanzenfarbstoff Gummigutta",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461344/1/-/",
             "name": "Stempel des Echten Gummiguttbaum",
             "order": 0,
@@ -244,7 +243,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Garcinia",
           },
           Object {
-            "description": "Hülsenfrüchtler und Johannisbrotgewächs; stammt aus Zentral- und Nordsüdamerika; wurde früher als Schwarzholz bezeichnet",
+            "description": "stammt aus Zentral- und Nordsüdamerika; wurde früher als Schwarzholz bezeichnet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461328/1/-/",
             "name": "Fruchthülse des Blutholzbaums",
             "order": 0,
@@ -253,7 +252,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Blutholzbaum",
           },
           Object {
-            "description": "Ingwergewächs; stammt aus Südasien; Kapselfrüchte werden als Gewürz verwendet",
+            "description": "stammt aus Südasien; Kapselfrüchte werden als Gewürz verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461314/1/-/",
             "name": "Samen des Kardamom",
             "order": 0,
@@ -262,16 +261,16 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Gr%C3%BCner_Kardamom",
           },
           Object {
-            "description": "Hülsenfrüchtler und Johannisbrotgewächs; stammt aus Süd- und Mittelamerika; entwickelt gelbes bis rötliches Baumharz (Copal)",
+            "description": "stammt aus Süd- und Mittelamerika; entwickelt gelbrötliches Baumharz (Copal)",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461325/1/-/",
-            "name": "Blütenboden und Stempel des Lokustbaums",
+            "name": "Blütenboden des Lokustbaums",
             "order": 0,
             "selected": false,
             "source": "Hymenaea_Courbaril_L._Amerikanischer_Kopalbaum_Lokustbaum_Teil2_Ausschnitt",
             "wiki": "https://de.wikipedia.org/wiki/Hymenaea_courbaril",
           },
           Object {
-            "description": "Stechpalmengewächs; verbreitet in Südamerika; aus trockenen Blättern wird ein Teeaufguss bereitet",
+            "description": "verbreitet in Südamerika; aus trockenen Blättern wird ein Teeaufguss bereitet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461340/1/-/",
             "name": "Fruchtknoten der Matepflanze",
             "order": 0,
@@ -280,7 +279,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Mate-Strauch",
           },
           Object {
-            "description": "Hülsenfrüchtler; beheimatet in Indien, im tropischen Afrika und in China; Blätter dienten früher zur Gewinnung der blauen Indigofarbe",
+            "description": "beheimatet in Indien, Afrika und China; Blätter dienten zur Gewinnung der blauen Indigofarbe",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461962/1/-/",
             "name": "Frucht der Indigopflanze",
             "order": 0,
@@ -289,7 +288,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Indigopflanze",
           },
           Object {
-            "description": "Schmetterlingsblütler und Hülsenfrüchtler; stammt aus den Anden; die ältesten Funde sind 5000 Jahre alt",
+            "description": "stammt aus den Anden; die ältesten Funde sind 5000 Jahre alt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461937/1/",
             "name": "Keimling der Erdnuss",
             "order": 0,
@@ -298,7 +297,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Erdnuss",
           },
           Object {
-            "description": "Buchenartige; vermutlich aus Syrien nach der Eiszeit in Europa und Asien ausgebreitet; Essbare Früchte heißen Walnüsse",
+            "description": "vermutlich aus Syrien stammend; essbare Früchte heißen Walnüsse",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461956/1/-/",
             "name": "Blüte des Echten Walnussbaums",
             "order": 0,
@@ -307,7 +306,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Echte_Walnuss",
           },
           Object {
-            "description": "Rauvolfioideae und Hundsgiftgewächs; verbreitet im tropischen Afrika und Madagaskar; sondern Kautschuk bei verletzter Rinde ab",
+            "description": "verbreitet in den Tropen Afrikas und Madagaskars; verletzte Rinde sondert Kautschuk ab",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461359/1/",
             "name": "Samen der Kautschukliane",
             "order": 0,
@@ -316,7 +315,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Rauvolfioideae",
           },
           Object {
-            "description": "Wolfsmilchgewächs; ursprünglich aus Brasilien und Paraguay stammend; die Pflanzen sind als Maniak, Kassave oder Yuca bekannt",
+            "description": "stammt aus Brasilien und Paraguay; die Pflanze ist als Maniok, Kassave oder Yuca bekannt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461287/1/-/",
             "name": "Blüte des Manihots",
             "order": 0,
@@ -325,7 +324,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Manihot",
           },
           Object {
-            "description": "Ingwerartige; kommt in den Tropen vor; aus der Pflanze wird Stärkemehl gewonnen",
+            "description": "kommt in den Tropen vor; aus der Pflanze wird Stärkemehl gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461954/1/-/",
             "name": "Staubbeutel der Pfeilwurzpflanze",
             "order": 0,
@@ -334,34 +333,25 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Maranta_arundinacea",
           },
           Object {
-            "description": "Magnolienartige; ; Stammt von den Banda-Inseln und den nördlichen Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
+            "description": "stammt von den Banda-Inseln und den Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461280/1/-/",
-            "name": "Staubblattsäule des Muskatnussbaums",
+            "name": "Staubblatt des Muskatnussbaums",
             "order": 0,
             "selected": false,
             "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Ausschnitt",
             "wiki": "https://de.wikipedia.org/wiki/Muskatnussbaum",
           },
           Object {
-            "description": "Magnolienartige; ; Stammt von den Banda-Inseln und den nördlichen Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
-            "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461280/1/-/",
-            "name": "Fruchtknoten des Muskatnussbaums",
-            "order": 0,
-            "selected": false,
-            "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Teil2_Ausschnitt",
-            "wiki": "https://de.wikipedia.org/wiki/Muskatnussbaum",
-          },
-          Object {
-            "description": "Spargelgewächs; ist in den USA und Mexiko verbreitet; Pflanze wird seit langem als Heilpflanze genutzt",
+            "description": "kommt in den USA und Mexiko vor; Pflanze wird seit langem als Heilpflanze genutzt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461951/1/-/",
-            "name": "Frucht der Amerikanischen Agave",
+            "name": "Frucht der Agave",
             "order": 0,
             "selected": false,
             "source": "Phormium_tenax,_Agave_americana_Neuseeländischer_Flachs_Amerikanische_Agave_Ausschnitt",
             "wiki": "https://de.wikipedia.org/wiki/Agave_americana",
           },
           Object {
-            "description": "Lippenblütlerartige; stammt ursprünglich aus Indien; aus den Samen wird u.a. Öl gewonnen",
+            "description": "stammt ursprünglich aus Indien; aus Samen wird Öl gewonnen",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461357/1/-/",
             "name": "Fruchtknoten des Indischen Sesams",
             "order": 0,
@@ -370,7 +360,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Sesam",
           },
           Object {
-            "description": "Enzianartige; beheimatet in Südostasien; auch als Krähenaugenbaum bezeichnet",
+            "description": "beheimatet in Südostasien; auch als Krähenaugenbaum bezeichnet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459347/1/-/",
             "name": "Fruchtknoten des Brechnussbaums",
             "order": 0,
@@ -379,16 +369,25 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Brechnuss",
           },
           Object {
-            "description": "Seifenbaumartige; kommt im südlichen Florida und auf den karibischen Inseln vor; gilt als stark gefährdet",
+            "description": "stammt von den Banda-Inseln und den Molukken; Samen (Muskatnuss) wird als Gewürz verwendet",
+            "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461280/1/-/",
+            "name": "Fruchtknoten des Muskatnussbaums",
+            "order": 0,
+            "selected": false,
+            "source": "Myristica_fragrans_Houttuyn_Muskatnussbaum_Teil2_Ausschnitt",
+            "wiki": "https://de.wikipedia.org/wiki/Muskatnussbaum",
+          },
+          Object {
+            "description": "kommt in Südflorida und in der Karibik vor; gilt als stark gefährdet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_459334/1/-/",
-            "name": "Staubbeutel des Westindischen Mahagonibaums",
+            "name": "Staubbeutel des Mahagonibaums",
             "order": 0,
             "selected": false,
             "source": "Swietenia_Mahagoni_L._Amerikanischer_Mahagonibaum_Ausschnitt",
             "wiki": "https://de.wikipedia.org/wiki/Swietenia_mahagoni",
           },
           Object {
-            "description": "Heidekrautartige und Kamelie; verbreitet in Süd- und Ostasien; aus den Pflanzenteilen wird echter Tee gewonnen; ",
+            "description": "verbreitet in Süd- und Ostasien; aus den Pflanzenteilen wird Tee gewonnen; ",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461270/1/-/",
             "name": "Fruchtknoten des Teestrauchs",
             "order": 0,
@@ -397,7 +396,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Tee_(Pflanze)",
           },
           Object {
-            "description": "Malvengewächs; wachsen in den tropischen Regenwäldern Lateinamerikas; aus den Samen (Kakaobohne) wird u.a. Schokolade hergestellt",
+            "description": "wächst in den tropischen Regenwäldern Lateinamerikas; aus Samen (Kakaobohne) wird Schokolade hergestellt",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461271/1/-/",
             "name": "Staubblatt des Kakaobaums",
             "order": 0,
@@ -406,7 +405,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Kakaobaum",
           },
           Object {
-            "description": "Orchideenpflanze; stammt aus Mexiko und Mittelamerika; wird im Handel als Bourbon-Vanille bezeichnet",
+            "description": "stammt aus Mexiko und Mittelamerika; wird im Handel als Bourbon-Vanille bezeichnet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461941/1/",
             "name": "Honiglippe der Gewürzvanille",
             "order": 0,
@@ -415,7 +414,7 @@ exports[`Plantala should render correctly 1`] = `
             "wiki": "https://de.wikipedia.org/wiki/Gew%C3%BCrzvanille",
           },
           Object {
-            "description": "Ingwerartige; wächst in den Tropen und Subtropen; wird als Gewürz und Arzneimittel verwendet",
+            "description": "wächst in den (Sub-)Tropen; wird als Gewürz und Arzneimittel verwendet",
             "link": "https://sammlungen.uni-goettingen.de/objekt/record_naniweb_461279/1/-/",
             "name": "Fruchtknoten des Ingwers",
             "order": 0,
@@ -427,10 +426,10 @@ exports[`Plantala should render correctly 1`] = `
       }
       selectedPlants={Array []}
       setAction={[Function]}
-      setPlantalaData={[Function]}
       setSelectedPlant={[Function]}
     />
     <Footer
+      action="Start"
       selectedPlants={Array []}
       setActivePlant={[Function]}
       transformPlant={[Function]}

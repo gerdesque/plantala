@@ -23,13 +23,11 @@ export enum HeaderValue {
 }
 
 interface IMainProps {
-  plants: IPlant[],
-  selectedPlants: IPlant[],
-  action: Action,
-  setAction: any,
-  setSelectedPlant: any,
-  setPlantalaData: any
-  plantalaData: string
+  plants: IPlant[]
+  selectedPlants: IPlant[]
+  action: Action
+  setAction: any
+  setSelectedPlant: any
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Main({ plants, selectedPlants, action, setAction, setSelectedPlant, setPlantalaData, plantalaData }: IMainProps) {
+export default function Main({ plants, selectedPlants, action, setAction, setSelectedPlant}: IMainProps) {
   const classes = useStyles();
 
   return (
@@ -65,7 +63,7 @@ export default function Main({ plants, selectedPlants, action, setAction, setSel
         {action === Action.Start && <Landing /> }
         {action === Action.Select && <PlantList plants={plants} setSelectedPlant={setSelectedPlant} selectedPlants={selectedPlants} /> }
         {action === Action.Done && <Mandala selectedPlants={selectedPlants} /> }
-        {action === Action.Again && <Image selectedPlants={selectedPlants} setPlantalaData={setPlantalaData} plantalaData={plantalaData} /> }
+        {action === Action.Again && <Image selectedPlants={selectedPlants} /> }
       </Container>
     </main>
   );

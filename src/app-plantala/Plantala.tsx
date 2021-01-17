@@ -18,19 +18,6 @@ export enum Action {
   Again = "Again"
 }
 
-function* getNextAction(): IterableIterator<Action> {
-  let current = Action.Start;
-  while (true) {
-    yield current;
-    yield Action.Select;
-    yield Action.Done;
-    yield Action.Again;
-  }
-}
-
-const nextAction = getNextAction();
-nextAction.next();
-
 interface IPlantalaState {
   sound: ReactSoundProps['playStatus'],
   isPlaying: boolean,
@@ -38,8 +25,6 @@ interface IPlantalaState {
   imprint: boolean,
   plants: IPlant[],
   action: Action,
-  plantalaData: string,
-  
 }
 
 class Plantala extends Component {
@@ -48,11 +33,8 @@ class Plantala extends Component {
     sound: 'STOPPED',
     colorMode: true,
     imprint: false,
-    // values to be displayed in <Card />
     plants: plantItems.map(plant => ({...plant, selected: false, order: 0})),
-    // action mode to be displayed in <Main />
-    action: Action.Start,
-    plantalaData: ''
+    action: Action.Start
   }
 
   setStart = () => {
@@ -76,8 +58,21 @@ class Plantala extends Component {
   }
   
   setAction = () => {
-    this.state.action === 'Again' && this.resetPlants();
-    this.setState({action: nextAction.next().value});
+    switch(this.state.action){
+      case Action.Start:
+        this.setState({action: Action.Select});
+        break;
+      case Action.Select:
+        this.setState({action: Action.Done});
+        break;
+      case Action.Done:
+        this.setState({action: Action.Again});
+        break;
+      case Action.Again:
+        this.resetPlants();
+        this.setState({action: Action.Start});
+        break;
+    }
   }
 
   resetPlants = () => {
@@ -106,12 +101,8 @@ class Plantala extends Component {
     this.setState({ plants: transformedPlantsArray });
   }
 
-  setPlantalaData = (plantalaData: string) => {
-    this.setState({ plantalaData: plantalaData });
-  }
-
   render = () => {
-    const { isPlaying, sound, colorMode, imprint, plants, action, plantalaData } = this.state;
+    const { isPlaying, sound, colorMode, imprint, plants, action } = this.state;
     const selectedPlants = plants.filter((plant) => (plant.selected === true)).sort((a, b) => a.order  - b.order )
     const activePlant = plants.filter((plant) => (plant.active === true))[0];
     const imageMultiplier = action === Action.Again ? 2 : 1;
@@ -141,8 +132,6 @@ class Plantala extends Component {
             action={action}
             setAction={this.setAction}
             setSelectedPlant={this.selectedPlants}
-            plantalaData={plantalaData}
-            setPlantalaData={this.setPlantalaData}
           />
           <Footer
             selectedPlants={selectedPlants}

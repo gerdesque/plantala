@@ -1,18 +1,26 @@
 import React from 'react';
 import { Button, Grid } from '@material-ui/core';
+import { saveAs } from 'file-saver';
 
 interface IShareProps {
-  setPlantalaData?: any
   canvasRef: React.RefObject<HTMLCanvasElement>
 }
 
-const Share = ({ setPlantalaData, canvasRef }: IShareProps) => {
+function downloadCanvas(canvasRef: React.RefObject<HTMLCanvasElement>): void {
+  return canvasRef.current?.toBlob(function (blob) {
+    if (blob) {
+      saveAs(blob, "plantala.png");
+    }
+  });
+}
+
+const Share = ({ canvasRef }: IShareProps) => {
 
   return (
     <Grid container spacing={2} justify="center">
       <Grid item>
         <Button variant="contained" color="secondary"
-          onClick={() => setPlantalaData(canvasRef.current?.toDataURL())}>Download</Button>
+          onClick={() => downloadCanvas(canvasRef)}>Download</Button>
       </Grid>
       <Grid item>
         <Button variant="outlined" color="secondary"

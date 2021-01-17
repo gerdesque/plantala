@@ -12,11 +12,6 @@ exports[`Footer should render correctly 1`] = `
     <WithStyles(ForwardRef(AvatarGroup))
       max={5}
     />
-    <Drawer
-      activePlant={Object {}}
-      setActivePlant={[MockFunction]}
-      transformPlant={[MockFunction]}
-    />
   </WithStyles(ForwardRef(Grid))>
 </footer>
 `;

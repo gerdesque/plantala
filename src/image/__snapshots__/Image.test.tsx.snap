@@ -5,6 +5,9 @@ exports[`Image should render correctly 1`] = `
   container={true}
   justify="center"
 >
-  <Mandala />
+  <Mandala
+    isShareable={true}
+    selectedPlants={Array []}
+  />
 </WithStyles(ForwardRef(Grid))>
 `;

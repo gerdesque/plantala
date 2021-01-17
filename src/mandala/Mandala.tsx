@@ -6,8 +6,8 @@ import { AppContext } from '../app-plantala/Context';
 import Share from './Share';
 
 interface IMandalaProps {
-  selectedPlants: IPlant[],
-  setPlantalaData?: any
+  selectedPlants: IPlant[]
+  isShareable?: boolean
 }
 
 const useStyles = makeStyles(() => ({
@@ -17,10 +17,9 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Mandala = ({ selectedPlants, setPlantalaData }: IMandalaProps) => {
+const Mandala = ({ selectedPlants, isShareable = false }: IMandalaProps) => {
   const classes = useStyles();
   const { setPlants, canvasRef, canvasWidth, canvasHeight } = useCanvas();
-
   const [, imageMultiplier] = useContext(AppContext);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ const Mandala = ({ selectedPlants, setPlantalaData }: IMandalaProps) => {
         width={canvasWidth * imageMultiplier}
         height={canvasHeight * imageMultiplier}
       />
-      {setPlantalaData && <Share setPlantalaData={setPlantalaData} canvasRef={canvasRef} />}
+      {isShareable && <Share canvasRef={canvasRef} />}
     </>
   );
 };
